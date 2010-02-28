@@ -1,0 +1,306 @@
+# # Include Main JS
+page.headerData.1442 = COA 
+page.headerData.1442.if.isFalse = {$plugin.rzcolorbox.deactivate}
+
+# # CSS File defined in Constants?
+page.headerData.1442.1 = TEXT
+page.headerData.1442.1.value = <link type="text/css" media="screen" rel="stylesheet" href="typo3conf/ext/rzcolorbox/res/style4/css/colorbox.css" />
+page.headerData.1442.1.if.isFalse = {$plugin.rzcolorbox.cssPath}
+
+page.headerData.1442.2 = TEXT
+page.headerData.1442.2.value = <link type="text/css" media="screen" rel="stylesheet" href="{$plugin.rzcolorbox.cssPath}" />
+page.headerData.1442.2.if.isTrue = {$plugin.rzcolorbox.cssPath}
+
+# # Enable jQuery globally?
+page.headerData.1442.3 = TEXT
+page.headerData.1442.3.value = <script type="text/javascript" src="typo3conf/ext/rzcolorbox/res/js/jquery-1-4-1.js"></script>
+page.headerData.1442.3.if.isFalse = {$plugin.rzcolorbox.enableGlobal}
+
+page.headerData.1442.4 = TEXT
+page.headerData.1442.4.value = <script src="typo3conf/ext/rzcolorbox/res/js/jquery.colorbox.js" type="text/javascript"></script> 
+
+# # Include Custom JS
+page.headerData.1442.5 = TEXT
+page.headerData.1442.5.value = <script type="text/javascript">jQuery(document).ready(function(){ 
+
+# # Include custom rel
+page.headerData.1442.6 = TEXT
+page.headerData.1442.6.value = jQuery(".{$plugin.rzcolorbox.rel}
+page.headerData.1442.6.insertData = 1
+page.headerData.1442.6.stdWrap.dataWrap = |
+
+page.headerData.1442.7 = TEXT
+page.headerData.1442.7.value = ").colorbox({current:"
+
+# # Image {x} of {y} Locallang Definition
+page.headerData.1442.8 = TEXT
+page.headerData.1442.8.value = {LLL:EXT:rzcolorbox/locallang.xml:image}
+page.headerData.1442.8.insertData = 1
+page.headerData.1442.8.stdWrap.dataWrap = |
+page.headerData.1442.8.if.isFalse = {$plugin.rzcolorbox.lllPath}
+
+page.headerData.1442.9 = TEXT
+page.headerData.1442.9.value = {LLL:{$plugin.rzcolorbox.lllPath}:image}
+page.headerData.1442.9.insertData = 1
+page.headerData.1442.9.stdWrap.dataWrap = |
+page.headerData.1442.9.if.isTrue = {$plugin.rzcolorbox.lllPath}
+
+page.headerData.1442.10 = TEXT
+page.headerData.1442.10.value = {current} 
+
+page.headerData.1442.11 = TEXT
+page.headerData.1442.11.value = {LLL:EXT:rzcolorbox/locallang.xml:of}
+page.headerData.1442.11.insertData = 1
+page.headerData.1442.11.stdWrap.dataWrap = |
+page.headerData.1442.11.if.isFalse = {$plugin.rzcolorbox.lllPath}
+
+page.headerData.1442.12 = TEXT
+page.headerData.1442.12.value = {LLL:{$plugin.rzcolorbox.lllPath}:of}
+page.headerData.1442.12.insertData = 1
+page.headerData.1442.12.stdWrap.dataWrap = |
+page.headerData.1442.12.if.isTrue = {$plugin.rzcolorbox.lllPath}
+
+page.headerData.1442.13 = TEXT
+page.headerData.1442.13.value = {total}" 
+
+# # Slideshow
+page.headerData.1442.14 = TEXT
+page.headerData.1442.14.value = ,slideshow:true
+page.headerData.1442.14.if.isTrue.numRows {
+  table = tt_content
+  select.where = tx_rzcolorbox_slideshow='1'
+}
+
+page.headerData.1442.15 = TEXT
+page.headerData.1442.15.value = ,slideshowStart:"
+page.headerData.1442.15.if.isTrue.numRows {
+  table = tt_content
+  select.where = tx_rzcolorbox_slideshow='1'
+}
+
+# # Slideshow Start Locallang
+page.headerData.1442.16 = TEXT
+page.headerData.1442.16.value = {LLL:EXT:rzcolorbox/locallang.xml:slideshowstart}
+page.headerData.1442.16.insertData = 1
+page.headerData.1442.16.stdWrap.dataWrap = |
+page.headerData.1442.16.if.isTrue.numRows {
+  table = tt_content
+  select.where = tx_rzcolorbox_slideshow='1'
+}
+page.headerData.1442.16.if.isFalse = {$plugin.rzcolorbox.lllPath}
+
+page.headerData.1442.17 = TEXT
+page.headerData.1442.17.value = {LLL:{$plugin.rzcolorbox.lllPath}:slideshowstart}
+page.headerData.1442.17.insertData = 1
+page.headerData.1442.17.stdWrap.dataWrap = |
+page.headerData.1442.17.if.isTrue.numRows {
+  table = tt_content
+  select.where = tx_rzcolorbox_slideshow='1'
+}
+page.headerData.1442.17.if.isTrue = {$plugin.rzcolorbox.lllPath}
+
+page.headerData.1442.18 = TEXT
+page.headerData.1442.18.value = ",slideshowStop:"
+page.headerData.1442.18.if.isTrue.numRows {
+  table = tt_content
+  select.where = tx_rzcolorbox_slideshow='1'
+}
+
+# # Slideshow Stop Locallang
+page.headerData.1442.19 = TEXT
+page.headerData.1442.19.value = {LLL:EXT:rzcolorbox/locallang.xml:slideshowstop}
+page.headerData.1442.19.insertData = 1
+page.headerData.1442.19.stdWrap.dataWrap = |
+page.headerData.1442.19.if.isTrue.numRows {
+  table = tt_content
+  select.where = tx_rzcolorbox_slideshow='1'
+}
+page.headerData.1442.19.if.isFalse = {$plugin.rzcolorbox.lllPath}
+
+page.headerData.1442.20 = TEXT
+page.headerData.1442.20.value = {LLL:{$plugin.rzcolorbox.lllPath}:slideshowstop}"
+page.headerData.1442.20.insertData = 1
+page.headerData.1442.20.stdWrap.dataWrap = |
+page.headerData.1442.20.if.isTrue.numRows {
+  table = tt_content
+  select.where = tx_rzcolorbox_slideshow='1'
+}
+page.headerData.1442.20.if.isTrue = {$plugin.rzcolorbox.lllPath}
+
+# # Opacity
+page.headerData.1442.21 = TEXT
+page.headerData.1442.21.value = ,opacity:
+
+page.headerData.1442.22 = TEXT
+page.headerData.1442.22.value = "{$plugin.rzcolorbox.opacity}"
+page.headerData.1442.22.insertData = 1
+page.headerData.1442.22.stdWrap.dataWrap = |
+
+# # Buttons Text Locallang 
+# # Previous
+page.headerData.1442.23 = TEXT
+page.headerData.1442.23.value = ,previous:
+
+page.headerData.1442.24 = TEXT
+page.headerData.1442.24.value = "{LLL:EXT:rzcolorbox/locallang.xml:previous}"
+page.headerData.1442.24.insertData = 1
+page.headerData.1442.24.stdWrap.dataWrap = |
+page.headerData.1442.24.if.isFalse = {$plugin.rzcolorbox.lllPath}
+
+page.headerData.1442.25 = TEXT
+page.headerData.1442.25.value = "{LLL:{$plugin.rzcolorbox.lllPath}:previous}"
+page.headerData.1442.25.insertData = 1
+page.headerData.1442.25.stdWrap.dataWrap = |
+page.headerData.1442.25.if.isTrue = {$plugin.rzcolorbox.lllPath}
+
+# # Next
+page.headerData.1442.26 = TEXT
+page.headerData.1442.26.value = ,next:
+
+page.headerData.1442.27 = TEXT
+page.headerData.1442.27.value = "{LLL:EXT:rzcolorbox/locallang.xml:next}"
+page.headerData.1442.27.insertData = 1
+page.headerData.1442.27.stdWrap.dataWrap = |
+page.headerData.1442.27.if.isFalse = {$plugin.rzcolorbox.lllPath}
+
+page.headerData.1442.28 = TEXT
+page.headerData.1442.28.value = "{LLL:{$plugin.rzcolorbox.lllPath}:next}"
+page.headerData.1442.28.insertData = 1
+page.headerData.1442.28.stdWrap.dataWrap = |
+page.headerData.1442.28.if.isTrue = {$plugin.rzcolorbox.lllPath}
+
+# # Close
+page.headerData.1442.29 = TEXT
+page.headerData.1442.29.value = ,close:
+                      
+page.headerData.1442.30 = TEXT
+page.headerData.1442.30.value = "{LLL:EXT:rzcolorbox/locallang.xml:close}"
+page.headerData.1442.30.insertData = 1
+page.headerData.1442.30.stdWrap.dataWrap = |
+page.headerData.1442.30.if.isFalse = {$plugin.rzcolorbox.lllPath}
+
+page.headerData.1442.31 = TEXT
+page.headerData.1442.31.value = "{LLL:{$plugin.rzcolorbox.lllPath}:close}"
+page.headerData.1442.31.insertData = 1
+page.headerData.1442.31.stdWrap.dataWrap = |
+page.headerData.1442.31.if.isTrue = {$plugin.rzcolorbox.lllPath}
+
+# # Transition
+page.headerData.1442.32 = TEXT
+page.headerData.1442.32.value = ,transition:
+
+page.headerData.1442.33 = TEXT
+page.headerData.1442.33.value = "{$plugin.rzcolorbox.transition}"
+page.headerData.1442.33.insertData = 1
+page.headerData.1442.33.stdWrap.dataWrap = |
+
+# # Speed
+page.headerData.1442.34 = TEXT
+page.headerData.1442.34.value = ,speed:
+
+page.headerData.1442.35 = TEXT
+page.headerData.1442.35.value = "{$plugin.rzcolorbox.speed}"
+page.headerData.1442.35.insertData = 1
+page.headerData.1442.35.stdWrap.dataWrap = |
+
+# # Inner Width
+page.headerData.1442.36 = TEXT
+page.headerData.1442.36.value = ,innerWidth:
+page.headerData.1442.36.if.isTrue = {$plugin.rzcolorbox.innerWidth}
+
+page.headerData.1442.37 = TEXT
+page.headerData.1442.37.value = "{$plugin.rzcolorbox.innerWidth}"
+page.headerData.1442.37.insertData = 1
+page.headerData.1442.37.stdWrap.dataWrap = |
+page.headerData.1442.37.if.isTrue = {$plugin.rzcolorbox.innerWidth}
+
+# # Inner Height
+page.headerData.1442.38 = TEXT
+page.headerData.1442.38.value = ,innerHeight:
+page.headerData.1442.38.if.isTrue = {$plugin.rzcolorbox.innerHeight}
+
+page.headerData.1442.39 = TEXT
+page.headerData.1442.39.value = "{$plugin.rzcolorbox.innerHeight}"
+page.headerData.1442.39.insertData = 1
+page.headerData.1442.39.stdWrap.dataWrap = |
+page.headerData.1442.39.if.isTrue = {$plugin.rzcolorbox.innerHeight}
+
+page.headerData.1442.40 = TEXT
+page.headerData.1442.40.value = });});</script>
+
+[browser = msie]
+page.headerData.1442.41 = TEXT
+page.headerData.1442.41.value (
+<style type="text/css">
+.cboxIE #cboxTopLeft{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src={$plugin.rzcolorbox.absolutePath}typo3conf/ext/rzcolorbox/res/style4/css/images/internet_explorer/borderTopLeft.png, sizingMethod='scale');}
+.cboxIE #cboxTopCenter{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src={$plugin.rzcolorbox.absolutePath}typo3conf/ext/rzcolorbox/res/style4/css/images/internet_explorer/borderTopCenter.png, sizingMethod='scale');}
+.cboxIE #cboxTopRight{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src={$plugin.rzcolorbox.absolutePath}typo3conf/ext/rzcolorbox/res/style4/css/images/internet_explorer/borderTopRight.png, sizingMethod='scale');}
+.cboxIE #cboxBottomLeft{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src={$plugin.rzcolorbox.absolutePath}typo3conf/ext/rzcolorbox/res/style4/css/images/internet_explorer/borderBottomLeft.png, sizingMethod='scale');}
+.cboxIE #cboxBottomCenter{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src={$plugin.rzcolorbox.absolutePath}typo3conf/ext/rzcolorbox/res/style4/css/images/internet_explorer/borderBottomCenter.png, sizingMethod='scale');}
+.cboxIE #cboxBottomRight{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src={$plugin.rzcolorbox.absolutePath}typo3conf/ext/rzcolorbox/res/style4/css/images/internet_explorer/borderBottomRight.png, sizingMethod='scale');}
+.cboxIE #cboxMiddleLeft{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src={$plugin.rzcolorbox.absolutePath}typo3conf/ext/rzcolorbox/res/style4/css/images/internet_explorer/borderMiddleLeft.png, sizingMethod='scale');}
+.cboxIE #cboxMiddleRight{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src={$plugin.rzcolorbox.absolutePath}typo3conf/ext/rzcolorbox/res/style4/css/images/internet_explorer/borderMiddleRight.png, sizingMethod='scale');}
+</style>
+)
+[GLOBAL]
+
+# # Modify imageLinkWrap
+tt_content.image.20.1.imageLinkWrap {
+typolink >
+typolink {
+
+parameter.cObject = IMG_RESOURCE
+parameter.cObject.file {
+import.current = 1
+#width = {$styles.content.imgtext.linkWrap.width}
+#height = {$styles.content.imgtext.linkWrap.height}
+effects = {$styles.content.imgtext.linkWrap.effects}
+}
+
+parameter.override {
+field = image_link
+listNum.stdWrap.data = register : IMAGE_NUM_CURRENT
+}
+
+ATagParams = class="{$plugin.rzcolorbox.rel}" rel="{$plugin.rzcolorbox.rel}[cb{field:uid}]"
+ATagParams.insertData = 1
+ATagParams.if.isFalse < .parameter.override
+
+target = {$styles.content.links.target}
+extTarget = {$styles.content.links.extTarget}
+}
+}
+
+# # Enable Colorbox for tt_news
+plugin.tt_news.imageMarkerFunc = tx_rzcolorbox_pi1->ttnewsImageMarkerFunc
+temp.imageLinkWrap = 1
+temp.imageLinkWrap {
+                enable = 1  
+                typolink {
+                title.field = imagetitletext
+                title.split.token.char = 10
+                title.split.returnKey.data = register : IMAGE_NUM_CURRENT
+                    parameter.data = TSFE:lastImageInfo|origFile
+                    ATagParams = class="{$plugin.rzcolorbox.rel}" rel="{$plugin.rzcolorbox.rel}"
+                    ATagParams.insertData = 1
+                }
+            }
+
+
+# # Enable tt_news Single view images
+[globalVar = LIT:1 = {$plugin.rzcolorbox.ttnewsSingle}]
+plugin.tt_news.displaySingle.image.imageLinkWrap >
+plugin.tt_news.displaySingle.image.imageLinkWrap < temp.imageLinkWrap
+[global]
+
+# # Enable tt_news List view images
+[globalVar = LIT:1 = {$plugin.rzcolorbox.ttnewsList}]
+plugin.tt_news.displayList.image.imageLinkWrap >
+plugin.tt_news.displayList.image.imageLinkWrap < temp.imageLinkWrap
+[global]
+
+# # Enable tt_news Latest view images
+[globalVar = LIT:1 = {$plugin.rzcolorbox.ttnewsLatest}]
+plugin.tt_news.displayLatest.image.imageLinkWrap >
+plugin.tt_news.displayLatest.image.imageLinkWrap < temp.imageLinkWrap
+[global]
