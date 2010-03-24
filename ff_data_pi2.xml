@@ -1,0 +1,204 @@
+<T3DataStructure>
+<meta>
+<langDisable>1</langDisable>
+</meta>
+  <sheets>
+    <sDEF>
+      <ROOT>
+        <TCEforms>
+          <sheetTitle>LLL:EXT:rzcolorbox/locallang_tca.xml:rzcolorbox.pi_flexform.sheet_general</sheetTitle>
+        </TCEforms>
+        <type>array</type>
+        <el>
+        <type>        
+          <TCEforms>
+          <label>LLL:EXT:rzcolorbox/locallang_tca.xml:rzcolorbox.pi_flexform.type</label>
+          <config>
+            <type>select</type>
+            <items type="array">
+            <numIndex index="0" type="array">
+            <numIndex index="0">LLL:EXT:rzcolorbox/locallang_tca.xml:rzcolorbox.pi_flexform.iframe_select</numIndex>
+            <numIndex index="1">iframe</numIndex>
+            </numIndex>       
+            <numIndex index="1" type="array">
+            <numIndex index="0">LLL:EXT:rzcolorbox/locallang_tca.xml:rzcolorbox.pi_flexform.inline_select</numIndex>
+            <numIndex index="1">inline</numIndex>
+            </numIndex>       
+            <numIndex index="2" type="array">
+            <numIndex index="0">LLL:EXT:rzcolorbox/locallang_tca.xml:rzcolorbox.pi_flexform.html_select</numIndex>
+            <numIndex index="1">html</numIndex>
+            </numIndex>           
+            </items>          
+            <maxitems>1</maxitems>
+            <size>1</size>          
+          </config>
+          <onChange>reload</onChange>
+          </TCEforms>
+        </type>
+       <ce>
+          <TCEforms>
+            <label>LLL:EXT:rzcolorbox/locallang_tca.xml:rzcolorbox.pi_flexform.ce</label>
+            <displayCond>FIELD:type:=:inline</displayCond>
+            <config>
+              <form_type>user</form_type>
+              <userFunc>tx_rzcolorbox_dbrelation->dbselect</userFunc>
+            </config>
+          </TCEforms>
+        </ce>
+        <iframe>
+          <TCEforms>
+          <label>LLL:EXT:rzcolorbox/locallang_tca.xml:rzcolorbox.pi_flexform.link</label>
+          <displayCond>FIELD:type:=:iframe</displayCond>
+          <config>
+            <type>input</type>
+            <size>20</size>
+            <default></default>
+            <wizards type="array">
+            <_PADDING>2</_PADDING>
+            <link type="array">
+            <type>popup</type>
+            <title>Link</title>
+            <icon>link_popup.gif</icon>
+            <script>browse_links.php?mode=wizard&amp;act=file</script>
+            <params type="array">
+            <blindLinkOptions>mail,spec</blindLinkOptions>
+            </params>
+            <JSopenParams>height=300,width=500,status=0,menubar=0,scrollbars=1</JSopenParams>
+            </link>
+            </wizards>
+          </config>
+          </TCEforms>
+        </iframe>
+        <html>
+          <TCEforms>
+          <label>LLL:EXT:rzcolorbox/locallang_tca.xml:rzcolorbox.pi_flexform.html</label>
+          <displayCond>FIELD:type:=:html</displayCond>
+          <config>
+            <type>text</type>
+            <cols>30</cols>
+            <rows>5</rows>
+          </config>
+          </TCEforms>
+        </html> 		
+        <text>
+          <TCEforms>
+          <label>LLL:EXT:rzcolorbox/locallang_tca.xml:rzcolorbox.pi_flexform.text</label>
+          <config>
+            <type>text</type>
+            <cols>30</cols>
+            <rows>5</rows>
+          </config>
+          <defaultExtras>richtext[formatblock|bold|italic|underline|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image|chMode]:rte_transform[mode=css]</defaultExtras>
+          </TCEforms>
+        </text>  
+        </el>
+      </ROOT>
+    </sDEF>
+    <options>
+      <ROOT>
+        <TCEforms>
+          <sheetTitle>LLL:EXT:rzcolorbox/locallang_tca.xml:rzcolorbox.pi_flexform.sheet_options</sheetTitle>
+        </TCEforms>
+        <type>array</type>
+        <el>
+       <template>
+          <TCEforms>
+            <label>LLL:EXT:rzcolorbox/locallang_tca.xml:rzcolorbox.pi_flexform.template</label>
+            <config>
+              <type>input</type>
+              <size>25</size>
+              <default></default>
+              <wizards type="array">
+                <_PADDING>2</_PADDING>
+                <link type="array">
+                <type>popup</type>
+                <title>Template</title>
+                <icon>link_popup.gif</icon>
+                <script>browse_links.php?mode=wizard&amp;act=file</script>
+                <params type="array">
+                  <blindLinkOptions>page,url,mail,spec</blindLinkOptions>
+                  <allowedExtensions>htm,html,tmpl,tpl</allowedExtensions>
+                </params>
+                <JSopenParams>height=300,width=500,status=0,menubar=0,scrollbars=1</JSopenParams>
+                </link>
+              </wizards>
+            </config>
+          </TCEforms>
+        </template>
+        <transition>        
+          <TCEforms>
+          <label>LLL:EXT:rzcolorbox/locallang_tca.xml:rzcolorbox.pi_flexform.transition</label>
+          <config>
+            <type>select</type>
+            <items type="array">
+            <numIndex index="0" type="array">
+            <numIndex index="0">LLL:EXT:rzcolorbox/locallang_tca.xml:rzcolorbox.pi_flexform.transition_elastic</numIndex>
+            <numIndex index="1">elastic</numIndex>
+            </numIndex>       
+            <numIndex index="1" type="array">
+            <numIndex index="0">LLL:EXT:rzcolorbox/locallang_tca.xml:rzcolorbox.pi_flexform.transition_fade</numIndex>
+            <numIndex index="1">fade</numIndex>
+            </numIndex>       
+            <numIndex index="2" type="array">
+            <numIndex index="0">LLL:EXT:rzcolorbox/locallang_tca.xml:rzcolorbox.pi_flexform.transition_none</numIndex>
+            <numIndex index="1">none</numIndex>
+            </numIndex>           
+            </items>          
+            <maxitems>1</maxitems>
+            <size>1</size>          
+          </config>
+          </TCEforms>
+        </transition>
+        <width>
+          <TCEforms>
+          <label>LLL:EXT:rzcolorbox/locallang_tca.xml:rzcolorbox.pi_flexform.width</label>
+          <config>
+            <type>input</type>
+            <size>5</size>
+          </config>
+          </TCEforms>
+        </width> 
+        <height>
+          <TCEforms>
+          <label>LLL:EXT:rzcolorbox/locallang_tca.xml:rzcolorbox.pi_flexform.height</label>
+          <config>
+            <type>input</type>
+            <size>5</size>
+          </config>
+          </TCEforms>
+        </height>
+        <deactivate_width>
+          <TCEforms>
+          <label>LLL:EXT:rzcolorbox/locallang_tca.xml:rzcolorbox.pi_flexform.deactivate_width</label>
+          <config>
+            <type>check</type>
+            <checkbox></checkbox>
+            <size>1</size>
+          </config>
+          </TCEforms>
+        </deactivate_width>  
+        <deactivate_height>
+          <TCEforms>
+          <label>LLL:EXT:rzcolorbox/locallang_tca.xml:rzcolorbox.pi_flexform.deactivate_height</label>
+          <config>
+            <type>check</type>
+            <checkbox></checkbox>
+            <size>1</size>
+          </config>
+          </TCEforms>
+        </deactivate_height>    
+        <open>
+          <TCEforms>
+          <label>LLL:EXT:rzcolorbox/locallang_tca.xml:rzcolorbox.pi_flexform.open</label>
+          <config>
+            <type>check</type>
+            <checkbox></checkbox>
+            <size>1</size>
+          </config>
+          </TCEforms>
+        </open>     
+        </el>
+      </ROOT>
+    </options>
+  </sheets>
+</T3DataStructure>

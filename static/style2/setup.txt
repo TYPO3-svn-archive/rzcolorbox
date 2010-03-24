@@ -13,7 +13,7 @@ page.headerData.1442.2.if.isTrue = {$plugin.rzcolorbox.cssPath}
 
 # # Enable jQuery globally?
 page.headerData.1442.3 = TEXT
-page.headerData.1442.3.value = <script type="text/javascript" src="typo3conf/ext/rzcolorbox/res/js/jquery-1-4-1.js"></script>
+page.headerData.1442.3.value = <script type="text/javascript" src="typo3conf/ext/rzcolorbox/res/js/jquery-1-4-2.js"></script>
 page.headerData.1442.3.if.isFalse = {$plugin.rzcolorbox.enableGlobal}
 
 page.headerData.1442.4 = TEXT
@@ -207,7 +207,7 @@ extTarget = {$styles.content.links.extTarget}
 }
 
 # # Enable Colorbox for tt_news
-plugin.tt_news.imageMarkerFunc = tx_rzcolorbox_pi1->ttnewsImageMarkerFunc
+plugin.tt_news.imageMarkerFunc = tx_rzcolorbox_ttnews->ttnewsImageMarkerFunc
 temp.imageLinkWrap = 1
 temp.imageLinkWrap {
                 enable = 1  

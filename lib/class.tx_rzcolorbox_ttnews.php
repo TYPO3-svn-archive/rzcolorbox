@@ -2,7 +2,7 @@
 /***************************************************************
 *  Copyright notice
 *
-*  (c) 2009 Raphael Zschorsch <rafu1987@gmail.com>
+*  (c) 2010 Raphael Zschorsch <rafu1987@gmail.com>
 *  All rights reserved
 *
 *  This script is part of the TYPO3 project. The TYPO3 project is
@@ -32,9 +32,9 @@ require_once(PATH_tslib.'class.tslib_pibase.php');
  * @subpackage    rzcolorbox
  */
  
-class tx_rzcolorbox_pi1 extends tslib_pibase {
-    var $prefixId      = 'tx_rzcolorbox_pi1';
-    var $scriptRelPath = 'pi1/class.tx_rzcolorbox_pi1.php';
+class tx_rzcolorbox_ttnews extends tslib_pibase {
+    var $prefixId      = 'tx_rzcolorbox_ttnews';
+    var $scriptRelPath = 'pi1/class.tx_rzcolorbox_ttnews.php';
     var $extKey        = 'rzcolorbox';
     var $pi_checkCHash = true;
     var $conf = array();
@@ -134,8 +134,8 @@ class tx_rzcolorbox_pi1 extends tslib_pibase {
     
 }
 
-if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/jq_fancybox/pi1/class.tx_jqfancybox_pi1.php'])    {
-    include_once($TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/jq_fancybox/pi1/class.tx_jqfancybox_pi1.php']);
+if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/rzcolorbox/lib/class.tx_rzcolorbox_ttnews.php'])    {
+    include_once($TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/rzcolorbox/pi1/class.tx_rzcolorbox_ttnews.php']);
 }
 
 ?>

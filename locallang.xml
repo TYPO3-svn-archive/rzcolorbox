@@ -13,6 +13,8 @@
 			<label index="previous">previous</label>
 			<label index="next">next</label>
 			<label index="close">close</label>
+			<label index="pi2_title">ColorBox for Content</label>
+      <label index="pi2_plus_wiz_description">Inserts a plugin to show Content in a ColorBox</label> 
 		</languageKey>
 		<languageKey index="de" type="array">
 			<label index="image">Bild </label>
@@ -22,6 +24,8 @@
 			<label index="previous">voriges</label>
 			<label index="next">nächstes</label>
 			<label index="close">schliessen</label>
+			<label index="pi2_title">ColorBox für Inhalt</label>
+      <label index="pi2_plus_wiz_description">Fügt ein Plugin hinzu, um Inhalt in einer ColorBox anzuzeigen</label> 
 		</languageKey>
 		<languageKey index="dk" type="array">
 		</languageKey>

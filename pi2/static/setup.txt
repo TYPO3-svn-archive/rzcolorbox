@@ -1,0 +1,11 @@
+# # Various Settings [BEGIN]
+
+plugin.tx_rzcolorbox_pi2 {
+  templateFile = typo3conf/ext/rzcolorbox/res/template/template.html
+  colorboxWidth = 100%
+  colorboxHeight = 100%
+  linkClass = rzcolorbox-content
+  contentClass = rzce 
+}
+
+# # Various Settings [END]
