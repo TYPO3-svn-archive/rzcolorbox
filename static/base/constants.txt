@@ -36,13 +36,13 @@ innerWidth =
 # cat=rzcolorbox/option/040; type=string; label=Inner Height: Example: "50%", "500px", or 500;
 innerHeight = 
              
-# cat=rzcolorbox/option/050; type=options[elastic,fade,none]; label=Transition: Can be set to "elastic", "fade", or "none";
+# cat=rzcolorbox/option/060; type=options[elastic,fade,none]; label=Transition: Can be set to "elastic", "fade", or "none";
 transition = fade      
 
-# cat=rzcolorbox/option/060; type=string; label=Speed: Sets the speed of the fade and elastic transitions, in milliseconds;
-speed = 350       
+# cat=rzcolorbox/option/070; type=string; label=Speed: Sets the speed of the fade and elastic transitions, in milliseconds;
+speed = 350      
 
-# cat=rzcolorbox/option/070; type=string; label=Absolute Path to Site: This is needed for the IE CSS Files in Style 1 and 4 (usage like http://localhost/);
-absolutePath = http://www.your-domain.de/
+# cat=rzcolorbox/option/080; type=string; label=Slideshow Speed: Sets the speed of the slideshow, in milliseconds;
+slideshowSpeed = 2500       
                                 
 }

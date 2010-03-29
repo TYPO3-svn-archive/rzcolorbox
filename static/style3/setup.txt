@@ -198,8 +198,19 @@ page.headerData.1442.31.insertData = 1
 page.headerData.1442.31.stdWrap.dataWrap = |
 page.headerData.1442.31.if.isTrue = {$plugin.rzcolorbox.innerHeight}
 
+# # Slideshow Speed
 page.headerData.1442.32 = TEXT
-page.headerData.1442.32.value = });});</script>
+page.headerData.1442.32.value = ,slideshowSpeed:
+page.headerData.1442.32.if.isTrue = {$plugin.rzcolorbox.slideshowSpeed}
+
+page.headerData.1442.33 = TEXT
+page.headerData.1442.33.value = "{$plugin.rzcolorbox.slideshowSpeed}"
+page.headerData.1442.33.insertData = 1
+page.headerData.1442.33.stdWrap.dataWrap = |
+page.headerData.1442.33.if.isTrue = {$plugin.rzcolorbox.slideshowSpeed}
+
+page.headerData.1442.34 = TEXT
+page.headerData.1442.34.value = });});</script>
 
 # # Modify imageLinkWrap
 tt_content.image.20.1.imageLinkWrap {

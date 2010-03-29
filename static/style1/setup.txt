@@ -198,23 +198,25 @@ page.headerData.1442.31.insertData = 1
 page.headerData.1442.31.stdWrap.dataWrap = |
 page.headerData.1442.31.if.isTrue = {$plugin.rzcolorbox.innerHeight}
 
+# # Slideshow Speed
 page.headerData.1442.32 = TEXT
-page.headerData.1442.32.value = });});</script>
+page.headerData.1442.32.value = ,slideshowSpeed:
+page.headerData.1442.32.if.isTrue = {$plugin.rzcolorbox.slideshowSpeed}
+
+page.headerData.1442.33 = TEXT
+page.headerData.1442.33.value = "{$plugin.rzcolorbox.slideshowSpeed}"
+page.headerData.1442.33.insertData = 1
+page.headerData.1442.33.stdWrap.dataWrap = |
+page.headerData.1442.33.if.isTrue = {$plugin.rzcolorbox.slideshowSpeed}
+
+page.headerData.1442.34 = TEXT
+page.headerData.1442.34.value = });});</script>
 
 [browser = msie]
-page.headerData.1442.33 = TEXT
-page.headerData.1442.33.value (
-<style type="text/css">
-.cboxIE #cboxTopLeft{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src={$plugin.rzcolorbox.absolutePath}typo3conf/ext/rzcolorbox/res/style1/css/images/internet_explorer/borderTopLeft.png, sizingMethod='scale');}
-.cboxIE #cboxTopCenter{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src={$plugin.rzcolorbox.absolutePath}typo3conf/ext/rzcolorbox/res/style1/css/images/internet_explorer/borderTopCenter.png, sizingMethod='scale');}
-.cboxIE #cboxTopRight{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src={$plugin.rzcolorbox.absolutePath}typo3conf/ext/rzcolorbox/res/style1/css/images/internet_explorer/borderTopRight.png, sizingMethod='scale');}
-.cboxIE #cboxBottomLeft{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src={$plugin.rzcolorbox.absolutePath}typo3conf/ext/rzcolorbox/res/style1/css/images/internet_explorer/borderBottomLeft.png, sizingMethod='scale');}
-.cboxIE #cboxBottomCenter{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src={$plugin.rzcolorbox.absolutePath}typo3conf/ext/rzcolorbox/res/style1/css/images/internet_explorer/borderBottomCenter.png, sizingMethod='scale');}
-.cboxIE #cboxBottomRight{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src={$plugin.rzcolorbox.absolutePath}typo3conf/ext/rzcolorbox/res/style1/css/images/internet_explorer/borderBottomRight.png, sizingMethod='scale');}
-.cboxIE #cboxMiddleLeft{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src={$plugin.rzcolorbox.absolutePath}typo3conf/ext/rzcolorbox/res/style1/css/images/internet_explorer/borderMiddleLeft.png, sizingMethod='scale');}
-.cboxIE #cboxMiddleRight{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src={$plugin.rzcolorbox.absolutePath}typo3conf/ext/rzcolorbox/res/style1/css/images/internet_explorer/borderMiddleRight.png, sizingMethod='scale');}
-</style>
-)
+includeLibs.tx_rzcolorbox_t3jquery = typo3conf/ext/rzcolorbox/lib/class.tx_rzcolorbox_css.php
+page.headerData.1442.35 = USER
+page.headerData.1442.35.userFunc = tx_rzcolorbox_css->iecss
+page.headerData.1442.35.style = 1
 [global]             
 
 # # Modify imageLinkWrap
