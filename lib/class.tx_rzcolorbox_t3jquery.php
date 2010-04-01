@@ -24,12 +24,12 @@
   
 class tx_rzcolorbox_t3jquery {
   function getjquery() {
-    // checks if t3jquery is loaded     
+    // Checks if t3jquery is loaded     
     if (t3lib_extMgm::isLoaded('t3jquery')) {      
       require_once(t3lib_extMgm::extPath('t3jquery').'class.tx_t3jquery.php');
     }
     
-    // if t3jquery is loaded and the custom Library had been created    
+    // If t3jquery is loaded and the custom Library had been created    
     if (T3JQUERY === true) {
       tx_t3jquery::addJqJS();
     }
@@ -37,6 +37,11 @@ class tx_rzcolorbox_t3jquery {
       // Do nothing
     }  
   }
+  
+  // Includes the ColorBox JS after the jQuery (is needed for t3jquery)
+  function includeColorbox() {
+    $GLOBALS['TSFE']->additionalHeaderData[$this->prefixId] = '<script type="text/javascript" src="typo3conf/ext/rzcolorbox/res/js/jquery.colorbox.js"></script>';  
+  }  
 }
 
 ?>
