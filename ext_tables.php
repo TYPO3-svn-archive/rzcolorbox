@@ -3,6 +3,7 @@ if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 t3lib_extMgm::addStaticFile($_EXTKEY,'static/base/','jQuery ColorBox Base');
+t3lib_extMgm::addStaticFile($_EXTKEY,'static/t3jquery/','jQuery ColorBox Base for t3jquery');
 t3lib_extMgm::addStaticFile($_EXTKEY,'static/style1/','jQuery ColorBox Style 1');
 t3lib_extMgm::addStaticFile($_EXTKEY,'static/style2/','jQuery ColorBox Style 2');
 t3lib_extMgm::addStaticFile($_EXTKEY,'static/style3/','jQuery ColorBox Style 3');
