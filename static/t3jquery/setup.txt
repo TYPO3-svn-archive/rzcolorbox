@@ -4,15 +4,9 @@ page.1442 = COA
 page.1442 {
   10 = USER
   10.userfunc = tx_t3jquery->addJS
-  
-  20 = USER
-  20.userFunc = tx_t3jquery->addJS
-  20.jsfile.dataWrap = typo3conf/ext/rzcolorbox/res/js/jquery.colorbox.js
-
-  30 = USER
-  30.userFunc = tx_t3jquery->addJS
-  30.jsdata.cObject = COA
-  30.jsdata.cObject { 
+  10.jsfile.dataWrap = typo3conf/ext/rzcolorbox/res/js/jquery.colorbox.js
+  10.jsdata.cObject = COA
+  10.jsdata.cObject { 
     1 = TEXT    
     1.value = jQuery(document).ready(function(){jQuery(".{$plugin.rzcolorbox.rel}").colorbox({current:"
     2 = TEXT
