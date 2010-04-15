@@ -26,6 +26,7 @@
 		  <label index="rzcolorbox.pi_flexform.transition_elastic">elastic</label>
 		  <label index="rzcolorbox.pi_flexform.transition_fade">fade</label>
 		  <label index="rzcolorbox.pi_flexform.transition_none">none</label>
+		  <label index="rzcolorbox.pi_flexform.opacity">Opacity (Example: 0.85)</label>
 		</languageKey>                                                      
 		<languageKey index="de" type="array">
 		  <label index="rzcolorbox.pi_flexform.sheet_general">Allgemein</label>
@@ -48,6 +49,7 @@
 		  <label index="rzcolorbox.pi_flexform.transition_elastic">elastic</label>
 		  <label index="rzcolorbox.pi_flexform.transition_fade">fade</label>
 		  <label index="rzcolorbox.pi_flexform.transition_none">none</label>
+		  <label index="rzcolorbox.pi_flexform.opacity">Durschscheinen (Beispiel: 0.85)</label>
 		</languageKey>  
 	</data>
 </T3locallang>  

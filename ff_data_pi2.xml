@@ -149,6 +149,15 @@
           </config>
           </TCEforms>
         </transition>
+        <opacity>
+          <TCEforms>
+          <label>LLL:EXT:rzcolorbox/locallang_tca.xml:rzcolorbox.pi_flexform.opacity</label>
+          <config>
+            <type>input</type>
+            <size>5</size>
+          </config>
+          </TCEforms>
+        </opacity>
         <width>
           <TCEforms>
           <label>LLL:EXT:rzcolorbox/locallang_tca.xml:rzcolorbox.pi_flexform.width</label>

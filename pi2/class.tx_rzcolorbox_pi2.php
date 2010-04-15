@@ -69,6 +69,7 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
       	$transition = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'transition', 'options'); 
         $open = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'open', 'options');  
       	$link = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'iframe', 'sDEF');
+      	$opacity = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'opacity', 'options');
       	        
         if(is_numeric($link)) {
           $link = $this->pi_linkTP_keepPIvars_url("","","",$link);
@@ -142,6 +143,14 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
           $open_js = '';
         }
         
+        // Opacity
+        if($opacity == '') {
+          $opacity = '0.85';
+        }
+        else {
+          $opacity = $opacity;
+        }
+        
         // Set the transistion
         if($transition == 'elastic') {
           $transition_js = 'transition: "elastic",';
@@ -155,16 +164,16 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
         
         // JS for the Content
         if($deactivate_width == '1' && $deactivate_height == '0' ) {
-          $js = '$(".'.$linkClass.'").colorbox({'.$open_js.''.$transition_js.'height:"'.$height.'", '.$type_js.'})';
+          $js = '$(".'.$linkClass.'").colorbox({'.$open_js.''.$transition_js.'height:"'.$height.'", opacity:"'.$opacity.'", '.$type_js.'})';
         }
         else if($deactivate_height == '1' && $deactivate_width == '0') {
-          $js = '$(".'.$linkClass.'").colorbox({'.$open_js.''.$transition_js.'width:"'.$width.'", '.$type_js.'})';  
+          $js = '$(".'.$linkClass.'").colorbox({'.$open_js.''.$transition_js.'width:"'.$width.'", opacity:"'.$opacity.'", '.$type_js.'})';  
         }
         else if($deactivate_width == '1' && $deactivate_height == '1') {
-          $js = '$(".'.$linkClass.'").colorbox({'.$open_js.''.$transition_js.'inline:true, '.$type_js.'})';   
+          $js = '$(".'.$linkClass.'").colorbox({'.$open_js.''.$transition_js.'inline:true, opacity:"'.$opacity.'", '.$type_js.'})';   
         }
         else {
-          $js = '$(".'.$linkClass.'").colorbox({'.$open_js.''.$transition_js.'width:"'.$width.'", height:"'.$height.'", '.$type_js.'})'; 
+          $js = '$(".'.$linkClass.'").colorbox({'.$open_js.''.$transition_js.'width:"'.$width.'", height:"'.$height.'", opacity:"'.$opacity.'", '.$type_js.'})'; 
         }
           
         // Include JS 
