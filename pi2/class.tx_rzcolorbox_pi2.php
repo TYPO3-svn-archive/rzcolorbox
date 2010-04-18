@@ -175,7 +175,9 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
         else {
           $js = '$(".'.$linkClass.'").colorbox({'.$open_js.''.$transition_js.'width:"'.$width.'", height:"'.$height.'", opacity:"'.$opacity.'", '.$type_js.'})'; 
         }
-          
+        
+        /*  
+        
         // Include JS 
         $GLOBALS['TSFE']->additionalHeaderData[$this->prefixId] .= '
           <script type="text/javascript">
@@ -183,8 +185,18 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
           	 '.$js.'
           	});	
           </script>
-        ';
+        ';  
         
+        */
+        
+        $content = '
+          <script type="text/javascript">
+            $(document).ready(function(){   
+          	 '.$js.'
+          	});	
+          </script>
+        ';   
+                            
         // Set the template and define the markers
         $template['main'] = $this->cObj->getSubpart($this->templateCode,'###TEMPLATE###');
         $markerArray['###TEXT###'] = $this->pi_RTEcssText($text);
@@ -199,7 +211,7 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
         
         $markerArray['###LINK_CLOSE###'] = '</a>';
         
-        $content = $this->cObj->substituteMarkerArrayCached($template['main'], $markerArray, array());     
+        $content .= $this->cObj->substituteMarkerArrayCached($template['main'], $markerArray, array());     
     
         // Only include the Content Elements, if the type "inline" is chosen
         if($type == 'inline') {
