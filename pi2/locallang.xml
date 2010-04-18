@@ -2,24 +2,12 @@
 <T3locallang>
 	<meta type="array">
 		<type>module</type>
-		<description>Language labels for plugin &quot;tx_rztriplisting_pi1&quot;</description>
+		<description>Language labels for plugin &quot;tx_rzcolorbox_pi2&quot;</description>
 	</meta>
 	<data type="array">
 		<languageKey index="default" type="array">
-			<label index="listFieldHeader_headline">Headline</label>
-			<label index="listFieldHeader_sub_headline">Subheadline</label>
-			<label index="listFieldHeader_information">Information</label>
-			<label index="listFieldHeader_trip_progress">Trip progress</label>
-			<label index="listFieldHeader_images">Images</label>
-			<label index="back">Back</label>
 		</languageKey>
 		<languageKey index="de" type="array">
-			<label index="listFieldHeader_headline">Ueberschrift</label>
-			<label index="listFieldHeader_sub_headline">Kurtbeschreibung</label>
-			<label index="listFieldHeader_information">Information</label>
-			<label index="listFieldHeader_trip_progress">Reiseverlauf</label>
-			<label index="listFieldHeader_images">Bilder</label>
-			<label index="back">Zurueck</label>
 		</languageKey>
 	</data>
 </T3locallang>
