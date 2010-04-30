@@ -6,8 +6,13 @@
 	</meta>
 	<data type="array">
 		<languageKey index="default" type="array">
+		  <label index="link_text">Click me</label>
 		</languageKey>
 		<languageKey index="de" type="array">
+		  <label index="link_text">Klick mich</label>
+		</languageKey>
+		<languageKey index="fr" type="array">
+		  <label index="link_text">Cliquez moi</label>
 		</languageKey>
 	</data>
 </T3locallang>

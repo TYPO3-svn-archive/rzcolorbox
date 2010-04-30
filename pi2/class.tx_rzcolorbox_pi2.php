@@ -210,6 +210,7 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
         }
         
         $markerArray['###LINK_CLOSE###'] = '</a>';
+        $markerArray['###LINK_TEXT###'] = $this->pi_getLL('link_text');
         
         $content .= $this->cObj->substituteMarkerArrayCached($template['main'], $markerArray, array());     
     

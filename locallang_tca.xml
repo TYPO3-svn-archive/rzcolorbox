@@ -51,6 +51,29 @@
 		  <label index="rzcolorbox.pi_flexform.transition_none">none</label>
 		  <label index="rzcolorbox.pi_flexform.opacity">Durschscheinen (Beispiel: 0.85)</label>
 		</languageKey>  
+		<languageKey index="fr" type="array">
+		  <label index="rzcolorbox.pi_flexform.sheet_general">Général</label>
+		  <label index="rzcolorbox.pi_flexform.sheet_options">Options</label>
+      <label index="rzcolorbox.pi_flexform.ce">Elements de contenu</label> 
+      <label index="rzcolorbox.pi_flexform.text">Texte</label>
+      <label index="rzcolorbox.pi_flexform.template">Gabarit</label>
+      <label index="rzcolorbox.pi_flexform.width">Largeur (Exemple: "100%", "500px", or 500)</label>
+		  <label index="rzcolorbox.pi_flexform.height">Hauteur (Example: "100%", "500px", or 500)</label>
+      <label index="rzcolorbox.pi_flexform.deactivate_width">Pas de largeur fixe (celle-ci s’adaptera au contenu)</label>
+		  <label index="rzcolorbox.pi_flexform.deactivate_height">Pas de hauteur fixe (celle-ci s’adaptera au contenu)</label> 
+      <label index="rzcolorbox.pi_flexform.type">Type</label>
+      <label index="rzcolorbox.pi_flexform.html">HTML</label>
+      <label index="rzcolorbox.pi_flexform.iframe_select">iframe</label>
+		  <label index="rzcolorbox.pi_flexform.inline_select">en ligne</label>
+		  <label index="rzcolorbox.pi_flexform.html_select">html</label> 
+      <label index="rzcolorbox.pi_flexform.link">Lien</label> 
+      <label index="rzcolorbox.pi_flexform.open">Ouvrir (la ColorBox s’ouvrira automatiquement)</label>	
+      <label index="rzcolorbox.pi_flexform.transition">Transition</label>
+		  <label index="rzcolorbox.pi_flexform.transition_elastic">élastique</label>
+		  <label index="rzcolorbox.pi_flexform.transition_fade">fondu</label>
+		  <label index="rzcolorbox.pi_flexform.transition_none">aucun</label>
+		  <label index="rzcolorbox.pi_flexform.opacity">Opacité (Exemple: 0.85)</label>
+		</languageKey>  
 	</data>
 </T3locallang>  
 

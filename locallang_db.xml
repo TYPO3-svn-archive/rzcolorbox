@@ -13,5 +13,9 @@
 			<label index="tt_content.tx_rzcolorbox_slideshow">ColorBox Slideshow</label>
 			<label index="tt_content.list_type_pi2">ColorBox für Inhalt</label>
 		</languageKey>
+		<languageKey index="fr" type="array">
+			<label index="tt_content.tx_rzcolorbox_slideshow">Diaporama dans une ColorBox</label>
+			<label index="tt_content.list_type_pi2">Eléments de contenu dans ColorBox</label>
+		</languageKey>
 	</data>
 </T3locallang>
