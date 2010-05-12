@@ -17,9 +17,9 @@ page.headerData.1441.2.if.isTrue = {$plugin.rzcolorbox.cssPath}
 
 [browser = msie]
 includeLibs.tx_rzcolorbox_t3jquery = typo3conf/ext/rzcolorbox/lib/class.tx_rzcolorbox_css.php
-page.headerData.1441.1 = USER
-page.headerData.1441.1.userFunc = tx_rzcolorbox_css->iecss
-page.headerData.1441.1.style = 1
+page.headerData.1441.3 = USER
+page.headerData.1441.3.userFunc = tx_rzcolorbox_css->iecss
+page.headerData.1441.3.style = 1
 [global]             
 
 # # Modify imageLinkWrap
