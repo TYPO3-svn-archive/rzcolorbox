@@ -191,9 +191,11 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
         
         $content = '
           <script type="text/javascript">
-            $(document).ready(function(){   
-          	 '.$js.'
-          	});	
+           (function($){
+              $(document).ready(function(){
+            	 '.$js.'
+            	});
+            })(jQuery);
           </script>
         ';   
                             
