@@ -1,13 +1,19 @@
 # # Include Main JS
 page.headerData.1442 = COA
 page.headerData.1442.if.isFalse = {$plugin.rzcolorbox.deactivate}
-
-# # Enable jQuery globally?
-page.headerData.1442.1 = TEXT
+  
+# # Enable jQuery globally?  
+page.headerData.1442.1 = TEXT 
 page.headerData.1442.1.value ( 
 <script type="text/javascript" src="typo3conf/ext/rzcolorbox/res/js/jquery-1-4-2.js"></script>
 )
 page.headerData.1442.1.if.isFalse = {$plugin.rzcolorbox.enableGlobal}
+
+[globalVar = LIT:1 = {$plugin.rzcolorbox.noConflict}]
+page.headerData.1442.1.value ( 
+<script type="text/javascript" src="typo3conf/ext/rzcolorbox/res/js/jquery-1-4-2-noconflict.js"></script>
+)
+[global]
 
 # # JS File
 page.headerData.1442.2 = TEXT

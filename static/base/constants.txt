@@ -3,6 +3,9 @@ plugin.rzcolorbox {
 # cat=rzcolorbox/enable/010; type=boolean; label=Enable jQuery globally;
 enableGlobal = 0
 
+# cat=rzcolorbox/enable/020; type=boolean; label=jQuery noConflict mode;
+noConflict = 0
+
 # cat=rzcolorbox/enable/030; type=boolean; label=Deactivate ColorBox: This deactivates the ColorBox and doesn't insert the JS and CSS anymore;
 deactivate = 0 
 

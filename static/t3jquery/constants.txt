@@ -1,18 +1,15 @@
 plugin.rzcolorbox {
 
-# cat=rzcolorbox/enable/010; type=boolean; label=Enable jQuery globally;
-enableGlobal = 0
-
-# cat=rzcolorbox/enable/030; type=boolean; label=Deactivate ColorBox: This deactivates the ColorBox and doesn't insert the JS and CSS anymore;
+# cat=rzcolorbox/enable/010; type=boolean; label=Deactivate ColorBox: This deactivates the ColorBox and doesn't insert the JS and CSS anymore;
 deactivate = 0 
 
-# cat=rzcolorbox/enable/040; type=boolean; label=Enable tt_news Single View: This enables the ColorBox for tt_news Images in single view;
+# cat=rzcolorbox/enable/020; type=boolean; label=Enable tt_news Single View: This enables the ColorBox for tt_news Images in single view;
 ttnewsSingle = 0 
 
-# cat=rzcolorbox/enable/050; type=boolean; label=Enable tt_news List View: This enables the ColorBox for tt_news Images in list view;
+# cat=rzcolorbox/enable/030; type=boolean; label=Enable tt_news List View: This enables the ColorBox for tt_news Images in list view;
 ttnewsList = 0 
 
-# cat=rzcolorbox/enable/060; type=boolean; label=Enable tt_news Latest View: This enables the ColorBox for tt_news Images in latest view;
+# cat=rzcolorbox/enable/040; type=boolean; label=Enable tt_news Latest View: This enables the ColorBox for tt_news Images in latest view;
 ttnewsLatest = 0 
 
 # cat=rzcolorbox/file/010; type=string; label=Path to CSS File: (usage like fileadmin/templates/css/styles.css - the images folder has to be in the same directory);
