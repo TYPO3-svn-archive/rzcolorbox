@@ -70,10 +70,17 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
         $open = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'open', 'options');  
       	$link = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'iframe', 'sDEF');
       	$opacity = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'opacity', 'options');
-      	        
-        if(is_numeric($link)) {
-          $link = $this->pi_linkTP_keepPIvars_url("","","",$link);
-        }
+      	
+        // Typolink configuration                
+        //$typolink_conf['value'] = $this->pi_getLL('link_text');
+        $typolink_conf['typolink.']['parameter'] = $link;
+        //$typolink_conf['typolink.']['title'] = $this->pi_getLL('link_text');
+        $typolink_conf['typolink.']['no_cache'] = '0';
+        $typolink_conf['typolink.']['useCacheHash'] = '1';
+        $typolink_conf['typolink.']['returnLast'] = 'url';
+        
+        $link = $this->cObj->TEXT($typolink_conf);
+        
         $html = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'html', 'sDEF');         
         $html_output = str_replace("\n","",$html);
            
@@ -211,8 +218,8 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
           $markerArray['###LINK_OPEN###'] = '<a href="#" class="'.$linkClass.'">';
         }
         
-        $markerArray['###LINK_CLOSE###'] = '</a>';
         $markerArray['###LINK_TEXT###'] = $this->pi_getLL('link_text');
+        $markerArray['###LINK_CLOSE###'] = '</a>';
         
         $content .= $this->cObj->substituteMarkerArrayCached($template['main'], $markerArray, array());     
     
