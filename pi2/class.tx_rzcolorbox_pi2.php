@@ -171,16 +171,16 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
         
         // JS for the Content
         if($deactivate_width == '1' && $deactivate_height == '0' ) {
-          $js = '$(".'.$linkClass.'").colorbox({'.$open_js.''.$transition_js.'height:"'.$height.'", opacity:"'.$opacity.'", '.$type_js.'})';
+          $js = 'jQuery(".'.$linkClass.'").colorbox({'.$open_js.''.$transition_js.'height:"'.$height.'", opacity:"'.$opacity.'", '.$type_js.'})';
         }
         else if($deactivate_height == '1' && $deactivate_width == '0') {
-          $js = '$(".'.$linkClass.'").colorbox({'.$open_js.''.$transition_js.'width:"'.$width.'", opacity:"'.$opacity.'", '.$type_js.'})';  
+          $js = 'jQuery(".'.$linkClass.'").colorbox({'.$open_js.''.$transition_js.'width:"'.$width.'", opacity:"'.$opacity.'", '.$type_js.'})';  
         }
         else if($deactivate_width == '1' && $deactivate_height == '1') {
-          $js = '$(".'.$linkClass.'").colorbox({'.$open_js.''.$transition_js.'inline:true, opacity:"'.$opacity.'", '.$type_js.'})';   
+          $js = 'jQuery(".'.$linkClass.'").colorbox({'.$open_js.''.$transition_js.'inline:true, opacity:"'.$opacity.'", '.$type_js.'})';   
         }
         else {
-          $js = '$(".'.$linkClass.'").colorbox({'.$open_js.''.$transition_js.'width:"'.$width.'", height:"'.$height.'", opacity:"'.$opacity.'", '.$type_js.'})'; 
+          $js = 'jQuery(".'.$linkClass.'").colorbox({'.$open_js.''.$transition_js.'width:"'.$width.'", height:"'.$height.'", opacity:"'.$opacity.'", '.$type_js.'})'; 
         }
         
         /*  
@@ -199,7 +199,7 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
         $content = '
           <script type="text/javascript">
            (function($){
-              $(document).ready(function(){
+              jQuery(document).ready(function(){
             	 '.$js.'
             	});
             })(jQuery);
