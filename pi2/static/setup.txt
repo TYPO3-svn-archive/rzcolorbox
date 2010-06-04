@@ -5,7 +5,8 @@ plugin.tx_rzcolorbox_pi2 {
   colorboxWidth = 100%
   colorboxHeight = 100%
   linkClass = rzcolorbox-content
-  contentClass = rzce 
+  contentClass = rzce
+  opacity = 0.85
 }
 
 # # Various Settings [END]

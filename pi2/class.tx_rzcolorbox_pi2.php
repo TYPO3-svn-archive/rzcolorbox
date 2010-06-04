@@ -69,7 +69,8 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
       	$transition = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'transition', 'options'); 
         $open = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'open', 'options');  
       	$link = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'iframe', 'sDEF');
-      	$opacity = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'opacity', 'options');
+        $opacity = $this->conf['opacity'];
+        if(empty($opacity)) $opacity = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'opacity', 'options');
       	
         // Typolink configuration                
         //$typolink_conf['value'] = $this->pi_getLL('link_text');
