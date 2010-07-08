@@ -193,5 +193,49 @@ page.headerData.1442.30.insertData = 1
 page.headerData.1442.30.stdWrap.dataWrap = |
 page.headerData.1442.30.if.isTrue = {$plugin.rzcolorbox.slideshowSpeed}
 
+# # Overlay Close
 page.headerData.1442.31 = TEXT
-page.headerData.1442.31.value = });});</script>
+page.headerData.1442.31.value = ,overlayClose:
+page.headerData.1442.31.if.isFalse = {$plugin.rzcolorbox.overlayClose}
+
+page.headerData.1442.32 = TEXT
+page.headerData.1442.32.value = "{$plugin.rzcolorbox.overlayClose}"
+page.headerData.1442.32.insertData = 1
+page.headerData.1442.32.stdWrap.dataWrap = |
+page.headerData.1442.32.if.isFalse = {$plugin.rzcolorbox.overlayClose}
+
+# # Escape Key
+page.headerData.1442.33 = TEXT
+page.headerData.1442.33.value = ,escKey:
+page.headerData.1442.33.if.isFalse = {$plugin.rzcolorbox.escKey}
+
+page.headerData.1442.34 = TEXT
+page.headerData.1442.34.value = "{$plugin.rzcolorbox.escKey}"
+page.headerData.1442.34.insertData = 1
+page.headerData.1442.34.stdWrap.dataWrap = |
+page.headerData.1442.34.if.isFalse = {$plugin.rzcolorbox.escKey}
+
+# # Arrow Key
+page.headerData.1442.35 = TEXT
+page.headerData.1442.35.value = ,arrowKey:
+page.headerData.1442.35.if.isFalse = {$plugin.rzcolorbox.arrowKey}
+
+page.headerData.1442.36 = TEXT
+page.headerData.1442.36.value = "{$plugin.rzcolorbox.arrowKey}"
+page.headerData.1442.36.insertData = 1
+page.headerData.1442.36.stdWrap.dataWrap = |
+page.headerData.1442.36.if.isFalse = {$plugin.rzcolorbox.arrowKey}
+
+# # Loop
+page.headerData.1442.37 = TEXT
+page.headerData.1442.37.value = ,loop:
+page.headerData.1442.37.if.isFalse = {$plugin.rzcolorbox.loop}
+
+page.headerData.1442.38 = TEXT
+page.headerData.1442.38.value = "{$plugin.rzcolorbox.loop}"
+page.headerData.1442.38.insertData = 1
+page.headerData.1442.38.stdWrap.dataWrap = |
+page.headerData.1442.38.if.isFalse = {$plugin.rzcolorbox.loop}
+
+page.headerData.1442.39 = TEXT
+page.headerData.1442.39.value = });});</script>
