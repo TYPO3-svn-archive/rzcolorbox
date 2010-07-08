@@ -53,6 +53,7 @@ temp.imageLinkWrap {
                 enable = 1  
                 typolink {
                 title.field = imagetitletext
+                title.htmlSpecialChars = 1
                 title.split.token.char = 10
                 title.split.returnKey.data = register : IMAGE_NUM_CURRENT
                     parameter.data = TSFE:lastImageInfo|origFile
