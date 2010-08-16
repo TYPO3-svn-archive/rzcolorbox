@@ -125,6 +125,15 @@
             </config>
           </TCEforms>
         </template>
+        <linktext>
+          <TCEforms>
+          <label>LLL:EXT:rzcolorbox/locallang_tca.xml:rzcolorbox.pi_flexform.linktext</label>
+          <config>
+            <type>input</type>
+            <size>25</size>
+          </config>
+          </TCEforms>
+        </linktext>
         <transition>        
           <TCEforms>
           <label>LLL:EXT:rzcolorbox/locallang_tca.xml:rzcolorbox.pi_flexform.transition</label>

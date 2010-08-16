@@ -69,6 +69,7 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
       	$transition = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'transition', 'options'); 
         $open = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'open', 'options');  
       	$link = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'iframe', 'sDEF');
+        $link_text = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'linktext', 'options');
         $opacity = $this->conf['opacity'];
         if(empty($opacity)) $opacity = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'opacity', 'options');
       	
@@ -220,6 +221,8 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
         }
         
         $markerArray['###LINK_TEXT###'] = $this->pi_getLL('link_text');
+        if(!empty($link_text)) $markerArray['###LINK_TEXT###'] = $link_text;
+
         $markerArray['###LINK_CLOSE###'] = '</a>';
         
         $content .= $this->cObj->substituteMarkerArrayCached($template['main'], $markerArray, array());     
