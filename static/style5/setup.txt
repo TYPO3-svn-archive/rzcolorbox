@@ -43,7 +43,7 @@ extTarget = {$styles.content.links.extTarget}
 }
 
 [globalVar = LIT:1 = {$plugin.rzcolorbox.useWidth}]
-tt_content.image.20.1.imageLinkWrap.typolink.parameter.cObject.file.width = {$styles.content.imgtext.maxW}
+tt_content.image.20.1.imageLinkWrap.typolink.parameter.cObject.file.maxW = {$styles.content.imgtext.maxW}
 [global]
 
 # # If dam_ttnews is also loaded do not include the imageMarkerFunc
@@ -58,10 +58,10 @@ temp.imageLinkWrap = 1
 temp.imageLinkWrap {
                 enable = 1  
                 typolink {
-                title.field = imagetitletext
-                title.htmlSpecialChars = 1
-                title.split.token.char = 10
-                title.split.returnKey.data = register : IMAGE_NUM_CURRENT
+                    title.field = imagetitletext
+                    title.htmlSpecialChars = 1
+                    title.split.token.char = 10
+                    title.split.returnKey.data = register : IMAGE_NUM_CURRENT
                     parameter.data = TSFE:lastImageInfo|origFile
                     ATagParams = class="{$plugin.rzcolorbox.rel}" rel="{$plugin.rzcolorbox.rel}"
                     ATagParams.insertData = 1
