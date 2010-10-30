@@ -21,37 +21,15 @@
 *
 *  This copyright notice MUST APPEAR in all copies of the script!
 ***************************************************************/
-/**
- * [CLASS/FUNCTION INDEX of SCRIPT]
- *
- * Hint: use extdeveval to insert/update function index above.
- */
 
 require_once(PATH_tslib.'class.tslib_pibase.php');
-
-
-/**
- * Plugin 'rzcolorbox' for the 'rzcolorbox' extension.
- *
- * @author	Raphael Zschorsch <rafu1987@gmail.com>>
- * @package    TYPO3
- * @subpackage    tx_rzcolorbox
- */
  
 class tx_rzcolorbox_pi2 extends tslib_pibase {
-    var $prefixId      = 'tx_rzcolorbox_pi2';        // Same as class name
-    var $scriptRelPath = 'pi2/class.tx_rzcolorbox_pi2.php';    // Path to this script relative to the extension dir.
-    var $extKey        = 'rzcolorbox';    // The extension key.
+    var $prefixId      = 'tx_rzcolorbox_pi2';
+    var $scriptRelPath = 'pi2/class.tx_rzcolorbox_pi2.php';
+    var $extKey        = 'rzcolorbox';
     var $pi_checkCHash = true;
-    
-    /**
-     * The main method of the PlugIn
-     *
-     * @param    string        $content: The PlugIn content
-     * @param    array        $conf: The PlugIn configuration
-     * @return    The content that is displayed on the website
-     */ 
-     
+         
     function main($content, $conf) {
         $this->conf = $conf;
         $this->pi_setPiVarDefaults();

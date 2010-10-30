@@ -156,7 +156,7 @@ page.headerData.1442.23 = TEXT
 page.headerData.1442.23.value = ,speed:
 
 page.headerData.1442.24 = TEXT
-page.headerData.1442.24.value = "{$plugin.rzcolorbox.speed}"
+page.headerData.1442.24.value = {$plugin.rzcolorbox.speed}
 page.headerData.1442.24.insertData = 1
 page.headerData.1442.24.stdWrap.dataWrap = |
 
@@ -188,7 +188,7 @@ page.headerData.1442.29.value = ,slideshowSpeed:
 page.headerData.1442.29.if.isTrue = {$plugin.rzcolorbox.slideshowSpeed}
 
 page.headerData.1442.30 = TEXT
-page.headerData.1442.30.value = "{$plugin.rzcolorbox.slideshowSpeed}"
+page.headerData.1442.30.value = {$plugin.rzcolorbox.slideshowSpeed}
 page.headerData.1442.30.insertData = 1
 page.headerData.1442.30.stdWrap.dataWrap = |
 page.headerData.1442.30.if.isTrue = {$plugin.rzcolorbox.slideshowSpeed}
