@@ -28,6 +28,11 @@
             <label index="rzcolorbox.pi_flexform.transition_none">none</label>
             <label index="rzcolorbox.pi_flexform.opacity">Opacity (Example: 0.85)</label>
             <label index="rzcolorbox.pi_flexform.linktext">Linktext</label>
+            <label index="rzcolorbox.pi_flexform.linktext_type">Link type</label>
+            <label index="rzcolorbox.pi_flexform.linktext_image">Link image</label>
+            <label index="rzcolorbox.pi_flexform.linktext_image_width">Image width</label>
+            <label index="rzcolorbox.pi_flexform.image">Image</label>
+            <label index="rzcolorbox.pi_flexform.text">Text</label>
         </languageKey>
         <languageKey index="de" type="array">
             <label index="rzcolorbox.pi_flexform.sheet_general">Allgemein</label>
@@ -52,6 +57,11 @@
             <label index="rzcolorbox.pi_flexform.transition_none">none</label>
             <label index="rzcolorbox.pi_flexform.opacity">Durschscheinen (Beispiel: 0.85)</label>
             <label index="rzcolorbox.pi_flexform.linktext">Linktext</label>
+            <label index="rzcolorbox.pi_flexform.linktext_type">Linktyp</label>
+            <label index="rzcolorbox.pi_flexform.linktext_image">Link Bild</label>
+            <label index="rzcolorbox.pi_flexform.linktext_image_width">Bildbreite</label>
+            <label index="rzcolorbox.pi_flexform.image">Bild</label>
+            <label index="rzcolorbox.pi_flexform.text">Text</label>            
         </languageKey>
         <languageKey index="fr" type="array">
             <label index="rzcolorbox.pi_flexform.sheet_general">Général</label>
@@ -76,6 +86,11 @@
             <label index="rzcolorbox.pi_flexform.transition_none">aucun</label>
             <label index="rzcolorbox.pi_flexform.opacity">Opacité (Exemple: 0.85)</label>
             <label index="rzcolorbox.pi_flexform.linktext">Texte du lien</label>
+            <label index="rzcolorbox.pi_flexform.linktext_type">Type du lien</label>
+            <label index="rzcolorbox.pi_flexform.linktext_image">Image du lien</label>
+            <label index="rzcolorbox.pi_flexform.linktext_image_width">Largeur image</label>
+            <label index="rzcolorbox.pi_flexform.image">Image</label>
+            <label index="rzcolorbox.pi_flexform.text">Texte</label>              
         </languageKey>
         <languageKey index="nl" type="array">
             <label index="rzcolorbox.pi_flexform.sheet_general">Algemeen</label>
@@ -100,6 +115,11 @@
             <label index="rzcolorbox.pi_flexform.transition_none">geen</label>
             <label index="rzcolorbox.pi_flexform.opacity">Opacity (Voorbeeld: 0.85)</label>
             <label index="rzcolorbox.pi_flexform.linktext">Link Tekst</label>
+            <label index="rzcolorbox.pi_flexform.linktext_type">Linktype</label>
+            <label index="rzcolorbox.pi_flexform.linktext_image">Link Beeld</label>
+            <label index="rzcolorbox.pi_flexform.linktext_image_width">Beeld breedte</label>
+            <label index="rzcolorbox.pi_flexform.image">Beeld</label>
+            <label index="rzcolorbox.pi_flexform.text">Tekst</label>              
         </languageKey>
         <languageKey index="dk" type="array">
             <label index="rzcolorbox.pi_flexform.sheet_general">Generel</label>
@@ -124,6 +144,11 @@
             <label index="rzcolorbox.pi_flexform.transition_none">none</label>
             <label index="rzcolorbox.pi_flexform.opacity">Gennemsigtighed (Eksempel: 0.85)</label>
             <label index="rzcolorbox.pi_flexform.linktext">Linktekst</label>
+            <label index="rzcolorbox.pi_flexform.linktext_type">Linktyp</label>
+            <label index="rzcolorbox.pi_flexform.linktext_image">Link image</label>
+            <label index="rzcolorbox.pi_flexform.linktext_image_width">Image bredde</label>
+            <label index="rzcolorbox.pi_flexform.image">Image</label>
+            <label index="rzcolorbox.pi_flexform.text">Tekst</label>              
         </languageKey>
     </data>
 </T3locallang>  

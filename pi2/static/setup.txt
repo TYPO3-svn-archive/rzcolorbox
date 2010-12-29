@@ -7,6 +7,7 @@ plugin.tx_rzcolorbox_pi2 {
   linkClass = rzcolorbox-content
   contentClass = rzce
   opacity = 0.85
+  link_image_width = 250
 }
 
 # # Various Settings [END]

@@ -47,9 +47,13 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
       	$transition = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'transition', 'options'); 
         $open = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'open', 'options');  
       	$link = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'iframe', 'sDEF');
+        $link_type = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'linktext_type', 'options');
         $link_text = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'linktext', 'options');
+        $link_image = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'linktext_image', 'options');
+        $link_image_width = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'linktext_image_width', 'options');
         $opacity = $this->conf['opacity'];
         if(empty($opacity)) $opacity = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'opacity', 'options');
+        if(empty($link_image_width)) $link_image_width = $this->conf['link_image_width'];
       	
         // Typolink configuration                
         //$typolink_conf['value'] = $this->pi_getLL('link_text');
@@ -161,20 +165,22 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
         }
         else {
           $js = 'jQuery(".'.$linkClass.'").colorbox({'.$open_js.''.$transition_js.'width:"'.$width.'", height:"'.$height.'", opacity:"'.$opacity.'", '.$type_js.'})'; 
-        }
-        
-        /*  
+        } 
         
         // Include JS 
-        $GLOBALS['TSFE']->additionalHeaderData[$this->prefixId] .= '
+        $GLOBALS['TSFE']->additionalHeaderData['rzcolorbox_begin'] = '
           <script type="text/javascript">
-            $(document).ready(function(){   
+            jQuery(document).ready(function(){ 
+        ';
+        $GLOBALS['TSFE']->additionalHeaderData['rzcolorbox_middle'] .= '           
           	 '.$js.'
+        ';
+        $GLOBALS['TSFE']->additionalHeaderData['rzcolorbox_end'] = '
           	});	
           </script>
         ';  
         
-        */
+        /*
         
         $content = '
           <script type="text/javascript">
@@ -184,12 +190,14 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
             	});
             }(jQuery));
           </script>
-        ';   
+        ';  
+        
+        */ 
                             
         // Set the template and define the markers
         $template['main'] = $this->cObj->getSubpart($this->templateCode,'###TEMPLATE###');
         $markerArray['###TEXT###'] = $this->pi_RTEcssText($text);
-        
+                
         // Set the link appropriate to the type
         if($type == 'iframe') {
           $markerArray['###LINK_OPEN###'] = '<a href="'.$link.'" class="'.$linkClass.'">';
@@ -199,7 +207,18 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
         }
         
         $markerArray['###LINK_TEXT###'] = $this->pi_getLL('link_text');
-        if(!empty($link_text)) $markerArray['###LINK_TEXT###'] = $link_text;
+        
+        // Link text (flexform)
+        if(!empty($link_text) && $link_type == 'text') {
+          $markerArray['###LINK_TEXT###'] = $link_text;
+        }
+        
+        // Link image (flexform)
+        else if(!empty($link_image) && $link_type == 'image') {
+          $image['file'] = 'uploads/pics/'.$link_image;
+          $image['file.']['width'] = $link_image_width;
+          $markerArray['###LINK_TEXT###'] = $this->cObj->IMAGE($image);
+        }
 
         $markerArray['###LINK_CLOSE###'] = '</a>';
         
