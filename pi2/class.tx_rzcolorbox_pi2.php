@@ -33,7 +33,7 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
     function main($content, $conf) {
         $this->conf = $conf;
         $this->pi_setPiVarDefaults();
-        $this->pi_loadLL();
+        $this->pi_loadLL();     
         
         // Read Flexform	
       	$this->pi_initPIflexForm();
@@ -167,18 +167,34 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
           $js = 'jQuery(".'.$linkClass.'").colorbox({'.$open_js.''.$transition_js.'width:"'.$width.'", height:"'.$height.'", opacity:"'.$opacity.'", '.$type_js.'})'; 
         } 
         
-        // Include JS 
-        $GLOBALS['TSFE']->additionalHeaderData['rzcolorbox_begin'] = '
-          <script type="text/javascript">
-            jQuery(document).ready(function(){ 
-        ';
-        $GLOBALS['TSFE']->additionalHeaderData['rzcolorbox_middle'] .= '           
-          	 '.$js.'
-        ';
-        $GLOBALS['TSFE']->additionalHeaderData['rzcolorbox_end'] = '
-          	});	
-          </script>
-        ';  
+        // Include JS to footer
+        if($this->conf['moveJsFromHeaderToFooter'] == 1) { 
+          $GLOBALS['TSFE']->additionalFooterData['rzcolorbox_begin'] = '
+            <script type="text/javascript">
+              jQuery(document).ready(function(){ 
+          ';
+          $GLOBALS['TSFE']->additionalFooterData['rzcolorbox_middle'] .= '           
+            	 '.$js.'
+          ';
+          $GLOBALS['TSFE']->additionalFooterData['rzcolorbox_end'] = '
+            	});	
+            </script>
+          ';
+        }
+        // Include JS to header
+        else {
+          $GLOBALS['TSFE']->additionalHeaderData['rzcolorbox_begin'] = '
+            <script type="text/javascript">
+              jQuery(document).ready(function(){ 
+          ';
+          $GLOBALS['TSFE']->additionalHeaderData['rzcolorbox_middle'] .= '           
+            	 '.$js.'
+          ';
+          $GLOBALS['TSFE']->additionalHeaderData['rzcolorbox_end'] = '
+            	});	
+            </script>
+          ';
+        }  
         
         /*
         
