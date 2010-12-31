@@ -182,6 +182,28 @@ page.headerData.1442.28.insertData = 1
 page.headerData.1442.28.stdWrap.dataWrap = |
 page.headerData.1442.28.if.isTrue = {$plugin.rzcolorbox.innerHeight}
 
+# # Initial Width
+page.headerData.1442.25 = TEXT
+page.headerData.1442.25.value = ,initialWidth:
+page.headerData.1442.25.if.isTrue = {$plugin.rzcolorbox.initialWidth}
+
+page.headerData.1442.26 = TEXT
+page.headerData.1442.26.value = "{$plugin.rzcolorbox.initialWidth}"
+page.headerData.1442.26.insertData = 1
+page.headerData.1442.26.stdWrap.dataWrap = |
+page.headerData.1442.26.if.isTrue = {$plugin.rzcolorbox.initialWidth}
+
+# # Initial Height
+page.headerData.1442.27 = TEXT
+page.headerData.1442.27.value = ,initialHeight:
+page.headerData.1442.27.if.isTrue = {$plugin.rzcolorbox.initialHeight}
+
+page.headerData.1442.28 = TEXT
+page.headerData.1442.28.value = "{$plugin.rzcolorbox.initialHeight}"
+page.headerData.1442.28.insertData = 1
+page.headerData.1442.28.stdWrap.dataWrap = |
+page.headerData.1442.28.if.isTrue = {$plugin.rzcolorbox.initialHeight}
+
 # # Slideshow Speed
 page.headerData.1442.29 = TEXT
 page.headerData.1442.29.value = ,slideshowSpeed:
