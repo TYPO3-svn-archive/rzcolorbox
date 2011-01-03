@@ -32,14 +32,20 @@ innerWidth =
 
 # cat=rzcolorbox/option/040; type=string; label=Inner Height: Example: "50%", "500px", or 500;
 innerHeight = 
+
+# cat=rzcolorbox/option/050; type=string; label=Initial Width: Set the initial width, prior to any content being loaded;
+initialWidth = 
+
+# cat=rzcolorbox/option/060; type=string; label=Initial Height: Set the initial height, prior to any content being loaded;
+initialHeight = 
              
-# cat=rzcolorbox/option/060; type=options[elastic,fade,none]; label=Transition: Can be set to "elastic", "fade", or "none";
+# cat=rzcolorbox/option/070; type=options[elastic,fade,none]; label=Transition: Can be set to "elastic", "fade", or "none";
 transition = fade      
 
-# cat=rzcolorbox/option/070; type=string; label=Speed: Sets the speed of the fade and elastic transitions, in milliseconds;
+# cat=rzcolorbox/option/080; type=string; label=Speed: Sets the speed of the fade and elastic transitions, in milliseconds;
 speed = 350      
 
-# cat=rzcolorbox/option/080; type=string; label=Slideshow Speed: Sets the speed of the slideshow, in milliseconds;
+# cat=rzcolorbox/option/090; type=string; label=Slideshow Speed: Sets the speed of the slideshow, in milliseconds;
 slideshowSpeed = 2500       
                                 
 }
