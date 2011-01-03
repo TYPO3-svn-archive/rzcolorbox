@@ -71,10 +71,10 @@ page.1442 {
     13.value = ,innerHeight:"{$plugin.rzcolorbox.innerHeight}"     
     13.if.isTrue = {$plugin.rzcolorbox.innerHeight}  
     14 = TEXT 
-    14.value = ,innerWidth:"{$plugin.rzcolorbox.initialWidth}"     
+    14.value = ,initialWidth:"{$plugin.rzcolorbox.initialWidth}"     
     14.if.isTrue = {$plugin.rzcolorbox.initialWidth}     
     15 = TEXT                                                     
-    15.value = ,innerHeight:"{$plugin.rzcolorbox.initialHeight}"     
+    15.value = ,initialHeight:"{$plugin.rzcolorbox.initialHeight}"     
     15.if.isTrue = {$plugin.rzcolorbox.initialHeight}        
     16 = TEXT         
     16.value = ,slideshowSpeed:"{$plugin.rzcolorbox.slideshowSpeed}"     
