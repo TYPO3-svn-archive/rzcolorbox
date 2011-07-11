@@ -23,32 +23,6 @@ page.headerData.1441.3.userFunc = tx_rzcolorbox_css->iecss
 page.headerData.1441.3.style = 1
 [global]             
 
-# # Modify imageLinkWrap
-tt_content.image.20.1.imageLinkWrap {
-typolink >
-typolink {
-
-parameter.cObject = IMG_RESOURCE
-parameter.cObject.file {
-import.current = 1
-#height = {$styles.content.imgtext.maxH}
-#effects = {$styles.content.imgtext.linkWrap.effects}
-}  
-
-parameter.override {
-field = image_link
-listNum.stdWrap.data = register : IMAGE_NUM_CURRENT
-}
-
-ATagParams = class="{$plugin.rzcolorbox.rel}" rel="{$plugin.rzcolorbox.rel}[cb{field:uid}]"
-ATagParams.insertData = 1
-ATagParams.if.isFalse < .parameter.override
-
-target = {$styles.content.links.target}
-extTarget = {$styles.content.links.extTarget}
-}
-}
-
 [globalVar = LIT:1 = {$plugin.rzcolorbox.useWidth}]
 tt_content.image.20.1.imageLinkWrap.typolink.parameter.cObject.file.maxW = {$styles.content.imgtext.maxW}
 [global]

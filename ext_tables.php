@@ -2,8 +2,22 @@
 if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
-t3lib_extMgm::addStaticFile($_EXTKEY,'static/base/','jQuery ColorBox Base');
-t3lib_extMgm::addStaticFile($_EXTKEY,'static/t3jquery/','jQuery ColorBox Base for t3jquery');
+
+if (t3lib_div::int_from_ver(TYPO3_version) >= 4005000) {
+  t3lib_extMgm::addStaticFile($_EXTKEY,'static/base/4.5/','4.5 jQuery ColorBox Base');  
+}
+
+else {
+  t3lib_extMgm::addStaticFile($_EXTKEY,'static/base/','jQuery ColorBox Base');
+}
+
+if (t3lib_div::int_from_ver(TYPO3_version) >= 4005000) {
+  t3lib_extMgm::addStaticFile($_EXTKEY,'static/t3jquery/4.5/','4.5 jQuery ColorBox Base for t3jquery');
+}
+
+else {
+  t3lib_extMgm::addStaticFile($_EXTKEY,'static/t3jquery/','jQuery ColorBox Base for t3jquery');  
+}
 t3lib_extMgm::addStaticFile($_EXTKEY,'static/style1/','jQuery ColorBox Style 1');
 t3lib_extMgm::addStaticFile($_EXTKEY,'static/style2/','jQuery ColorBox Style 2');
 t3lib_extMgm::addStaticFile($_EXTKEY,'static/style3/','jQuery ColorBox Style 3');
@@ -25,6 +39,9 @@ t3lib_div::loadTCA('tt_content');
 t3lib_extMgm::addTCAcolumns('tt_content',$tempColumns,1);
 
 $GLOBALS['TCA']['tt_content']['palettes']['7']['showitem'] .= ',tx_rzcolorbox_slideshow';
+# Raphael: Quickfix for TYPO3 4.5
+$GLOBALS['TCA']['tt_content']['palettes']['imagelinks']['showitem'] .= ', tx_rzcolorbox_slideshow';
+
 
 t3lib_div::loadTCA('tt_content'); 
 $TCA['tt_content']['types']['list']['subtypes_excludelist'][$_EXTKEY.'_pi2']='layout,select_key,pages';

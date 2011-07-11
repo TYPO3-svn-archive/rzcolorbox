@@ -333,6 +333,7 @@ import.current = 1
 
 parameter.override {
 field = image_link
+listNum.splitChar = 10
 listNum.stdWrap.data = register : IMAGE_NUM_CURRENT
 }
 
