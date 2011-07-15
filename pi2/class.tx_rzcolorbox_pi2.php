@@ -40,6 +40,8 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
       	$text = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'text', 'sDEF');
       	$width = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'width', 'options');
       	$height = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'height', 'options');
+      	$innerWidth = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'innerWidth', 'options');
+      	$innerHeight = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'innerHeight', 'options');      	
       	$deactivate_width = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'deactivate_width', 'options');
       	$deactivate_height = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'deactivate_height', 'options');
       	$template_file = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'template', 'options');
@@ -100,6 +102,14 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
           }
         }
         
+      	if($innerWidth == '') {
+          $innerWidth = $this->conf['colorboxInnerWidth'];
+        }
+        
+        if($innerHeight == '') {
+          $innerHeight = $this->conf['colorboxInnerHeight'];
+        }        
+        
         // Output the Content Elements        
         $ce_conf = array('tables' => 'tt_content','source' => $ce,'dontCheckPid' => 1);
         $ce_output = $this->cObj->RECORDS($ce_conf);
@@ -154,7 +164,10 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
         }
         
         // JS for the Content
-        if($deactivate_width == '1' && $deactivate_height == '0' ) {
+        if($innerWidth != '' || $innerHeight != '') {
+          $js = 'jQuery(".'.$linkClass.'").colorbox({'.$open_js.''.$transition_js.'innerWidth:"'.$innerWidth.'", innerHeight:"'.$innerHeight.'", opacity:"'.$opacity.'", '.$type_js.'})';  
+        }
+        else if($deactivate_width == '1' && $deactivate_height == '0' ) {
           $js = 'jQuery(".'.$linkClass.'").colorbox({'.$open_js.''.$transition_js.'height:"'.$height.'", opacity:"'.$opacity.'", '.$type_js.'})';
         }
         else if($deactivate_height == '1' && $deactivate_width == '0') {

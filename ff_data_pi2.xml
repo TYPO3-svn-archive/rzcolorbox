@@ -235,6 +235,24 @@
           </config>
           </TCEforms>
         </height>
+        <innerWidth>
+          <TCEforms>
+          <label>LLL:EXT:rzcolorbox/locallang_tca.xml:rzcolorbox.pi_flexform.innerWidth</label>
+          <config>
+            <type>input</type>
+            <size>5</size>
+          </config>
+          </TCEforms>
+        </innerWidth> 
+        <innerHeight>
+          <TCEforms>
+          <label>LLL:EXT:rzcolorbox/locallang_tca.xml:rzcolorbox.pi_flexform.innerHeight</label>
+          <config>
+            <type>input</type>
+            <size>5</size>
+          </config>
+          </TCEforms>
+        </innerHeight>        
         <deactivate_width>
           <TCEforms>
           <label>LLL:EXT:rzcolorbox/locallang_tca.xml:rzcolorbox.pi_flexform.deactivate_width</label>
