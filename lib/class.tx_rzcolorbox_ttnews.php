@@ -34,7 +34,7 @@ require_once(PATH_tslib.'class.tslib_pibase.php');
  
 class tx_rzcolorbox_ttnews extends tslib_pibase {
     var $prefixId      = 'tx_rzcolorbox_ttnews';
-    var $scriptRelPath = 'pi1/class.tx_rzcolorbox_ttnews.php';
+    var $scriptRelPath = 'lib/class.tx_rzcolorbox_ttnews.php';
     var $extKey        = 'rzcolorbox';
     var $pi_checkCHash = true;
     var $conf = array();
@@ -135,7 +135,7 @@ class tx_rzcolorbox_ttnews extends tslib_pibase {
 }
 
 if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/rzcolorbox/lib/class.tx_rzcolorbox_ttnews.php'])    {
-    include_once($TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/rzcolorbox/pi1/class.tx_rzcolorbox_ttnews.php']);
+    include_once($TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/rzcolorbox/lib/class.tx_rzcolorbox_ttnews.php']);
 }
 
 ?>

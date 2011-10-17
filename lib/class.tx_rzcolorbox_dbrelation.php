@@ -91,8 +91,8 @@ class tx_rzcolorbox_dbrelation {
   }          
 }
 
-if (defined('TYPO3_MODE') && $GLOBALS['TYPO3_CONF_VARS']['XCLASS']['ext/rzcolorbox/class.tx_rzcolorbox_dbrelation.php'])	{
-  include_once($GLOBALS['TYPO3_CONF_VARS']['XCLASS']['ext/rzcolorbox/class.tx_rzcolorbox_dbrelation.php']);
+if (defined('TYPO3_MODE') && $GLOBALS['TYPO3_CONF_VARS']['XCLASS']['ext/rzcolorbox/lib/class.tx_rzcolorbox_dbrelation.php'])	{
+  include_once($GLOBALS['TYPO3_CONF_VARS']['XCLASS']['ext/rzcolorbox/lib/class.tx_rzcolorbox_dbrelation.php']);
 }
 
 ?>
