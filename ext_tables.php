@@ -59,7 +59,7 @@ if (TYPO3_MODE == 'BE') {
     $TBE_MODULES_EXT['xMOD_db_new_content_el']['addElClasses']['tx_rzcolorbox_pi2_wizicon'] = t3lib_extMgm::extPath($_EXTKEY).'pi2/class.tx_rzcolorbox_pi2_wizicon.php';
 }
 
-// Include the dbrelation userfunc for the flexform
-include_once(t3lib_extMgm::extPath($_EXTKEY).'lib/class.tx_rzcolorbox_dbrelation.php'); 
+// Include additional funcs
+include_once(t3lib_extMgm::extPath($_EXTKEY).'lib/class.tx_rzcolorbox_additionalFuncs.php'); 
 
 ?>

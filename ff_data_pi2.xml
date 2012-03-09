@@ -16,7 +16,7 @@
                             <label>LLL:EXT:rzcolorbox/locallang_tca.xml:rzcolorbox.pi_flexform.type</label>
                             <config>
                                 <type>select</type>
-                                <itemsProcFunc>tx_rzcolorbox_dbrelation->typeselect</itemsProcFunc>
+                                <itemsProcFunc>tx_rzcolorbox_additionalFuncs->typeselect</itemsProcFunc>
                                 <maxitems>1</maxitems>
                                 <size>1</size>                                  
                             </config>
@@ -28,8 +28,14 @@
                             <label>LLL:EXT:rzcolorbox/locallang_tca.xml:rzcolorbox.pi_flexform.ce</label>
                             <displayCond>FIELD:type:=:inline</displayCond>
                             <config>
-                                <form_type>user</form_type>
-                                <userFunc>tx_rzcolorbox_dbrelation->dbselect</userFunc>
+                                <type>group</type>
+                                <internal_type>db</internal_type>
+                                <allowed>tt_content</allowed>
+                                <show_thumbs>1</show_thumbs>
+                                <size>5</size>
+                                <autoSizeMax>5</autoSizeMax>
+                                <maxitems>100</maxitems>
+                                <minitems>0</minitems>
                             </config>
                         </TCEforms>
                     </ce>
