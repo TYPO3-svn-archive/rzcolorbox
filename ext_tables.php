@@ -24,6 +24,7 @@ t3lib_extMgm::addStaticFile($_EXTKEY,'static/style3/','jQuery ColorBox Style 3')
 t3lib_extMgm::addStaticFile($_EXTKEY,'static/style4/','jQuery ColorBox Style 4');
 t3lib_extMgm::addStaticFile($_EXTKEY,'static/style5/','jQuery ColorBox Style 5');
 t3lib_extMgm::addStaticFile($_EXTKEY,'pi2/static/','jQuery ColorBox for Content');
+t3lib_extMgm::addStaticFile($_EXTKEY,'static/tt_news/','jQuery ColorBox for tt_news');
 
 $tempColumns = array (
   'tx_rzcolorbox_slideshow' => array (		

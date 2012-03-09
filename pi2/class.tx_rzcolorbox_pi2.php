@@ -62,10 +62,8 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
             $link_image_width = $this->conf['link_image_width'];
 
         // Typolink configuration                
-        //$typolink_conf['value'] = $this->pi_getLL('link_text');
         $link = htmlspecialchars($link);
         $typolink_conf['typolink.']['parameter'] = $link;
-        //$typolink_conf['typolink.']['title'] = $this->pi_getLL('link_text');
         $typolink_conf['typolink.']['no_cache'] = '0';
         $typolink_conf['typolink.']['useCacheHash'] = '1';
         $typolink_conf['typolink.']['returnLast'] = 'url';
@@ -270,18 +268,6 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
         } else {
             return floatval($var);
         }
-    }
-
-    function escape_query($str) {
-        return strtr($str, array(
-                    "\0" => "",
-                    "'" => "&#39;",
-                    "\"" => "&#34;",
-                    "\\" => "&#92;",
-                    // more secure
-                    "<" => "&lt;",
-                    ">" => "&gt;",
-                ));
     }
 
 }
