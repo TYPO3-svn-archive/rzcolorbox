@@ -38,26 +38,26 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
         $this->pi_loadLL();
 
         // Read Flexform	
-        $this->pi_initPIflexForm();        
+        $this->pi_initPIflexForm();
         $text = $this->getFlexform('text');
-        $width = $this->getFlexform('width','options');
-        $height = $this->getFlexform('height','options');
-        $deactivate_width = $this->getFlexform('deactivate_width','options');
-        $deactivate_height = $this->getFlexform('deactivate_height','options');
-        $template_file = $this->getFlexform('template','options');
+        $width = $this->getFlexform('width', 'options');
+        $height = $this->getFlexform('height', 'options');
+        $deactivate_width = $this->getFlexform('deactivate_width', 'options');
+        $deactivate_height = $this->getFlexform('deactivate_height', 'options');
+        $template_file = $this->getFlexform('template', 'options');
         $type = $this->getFlexform('type');
-        $transition = $this->getFlexform('transition','options');
-        $open = $this->getFlexform('open','options');
+        $transition = $this->getFlexform('transition', 'options');
+        $open = $this->getFlexform('open', 'options');
         $link = $this->getFlexform('iframe');
-        $link_type = $this->getFlexform('linktext_type','options');
-        $link_text = $this->getFlexform('linktext','options');
-        $link_image = $this->getFlexform('linktext_image','options');
-        $link_image_width = $this->getFlexform('linktext_image_width','options');
-        
-        
+        $link_type = $this->getFlexform('linktext_type', 'options');
+        $link_text = $this->getFlexform('linktext', 'options');
+        $link_image = $this->getFlexform('linktext_image', 'options');
+        $link_image_width = $this->getFlexform('linktext_image_width', 'options');
+
+
         $opacity = $this->conf['opacity'];
         if (empty($opacity))
-            $opacity = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'opacity', 'options');
+            $opacity = $this->getFlexform('opacity', 'options');
         if (empty($link_image_width))
             $link_image_width = $this->conf['link_image_width'];
 
@@ -72,10 +72,12 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
 
         $link = $this->cObj->TEXT($typolink_conf);
 
-        $html = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'html', 'sDEF');
-        $html_output = str_replace("\n", "", $html);
+        $html = $this->getFlexform('html');
+        
+        // Modify output
+        $html = str_replace(array("\n","'"), array("<br />","\'"), $html);
 
-        $ce = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'ce', 'sDEF');
+        $ce = $this->getFlexform('ce');
         $ce_id = $this->cObj->data['uid'];
 
         // TypoScript values
@@ -131,7 +133,8 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
         } else if ($type == 'inline') {
             $type_js = 'inline:true, href:".' . $contentClass . '"';
         } else if ($type == 'html') {
-            $type_js = 'html:"' . $html_output . '"';
+            //$type_js = 'html:"' . $html . '"';
+            $type_js = "html:'" . $html . "'";
         }
 
         // Automatically open ColorBox
@@ -163,14 +166,14 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
         } else if ($deactivate_height == '1' && $deactivate_width == '0') {
             $js = 'jQuery(".' . $linkClass . '").colorbox({' . $open_js . '' . $transition_js . 'width:"' . $width . '", opacity:"' . $opacity . '", ' . $type_js . '})';
         } else if ($deactivate_width == '1' && $deactivate_height == '1') {
-            $js = 'jQuery(".' . $linkClass . '").colorbox({' . $open_js . '' . $transition_js . 'inline:true, opacity:"' . $opacity . '", ' . $type_js . '})';
+            $js = 'jQuery(".' . $linkClass . '").colorbox({' . $open_js . '' . $transition_js . 'opacity:"' . $opacity . '", ' . $type_js . '})';
         } else {
             $js = 'jQuery(".' . $linkClass . '").colorbox({' . $open_js . '' . $transition_js . 'width:"' . $width . '", height:"' . $height . '", opacity:"' . $opacity . '", ' . $type_js . '})';
         }
-        
+
         // Read t3jquery extConf
         $this->extConf = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['t3jquery']);
-        $integrateToFooter = $this->extConf['integrateToFooter'];       
+        $integrateToFooter = $this->extConf['integrateToFooter'];
 
         // Include JS to footer
         if ($this->conf['moveJsFromHeaderToFooter'] == 1 || $integrateToFooter == 1) {
@@ -256,8 +259,8 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
             $value = $flexform ? $flexform : $this->conf[$confOverride];
             return $value;
         }
-    }    
-    
+    }
+
     function floatVal($var) {
         $var_ext = str_replace(floatval($var), "", $var);
         $var_ext = trim($var_ext);
@@ -267,6 +270,18 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
         } else {
             return floatval($var);
         }
+    }
+
+    function escape_query($str) {
+        return strtr($str, array(
+                    "\0" => "",
+                    "'" => "&#39;",
+                    "\"" => "&#34;",
+                    "\\" => "&#92;",
+                    // more secure
+                    "<" => "&lt;",
+                    ">" => "&gt;",
+                ));
     }
 
 }
