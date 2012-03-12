@@ -35,7 +35,7 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
     function main($content, $conf) {
         $this->conf = $conf;
         $this->pi_setPiVarDefaults();
-        $this->pi_loadLL();
+        $this->pi_loadLL($content, $conf);
 
         // Read Flexform	
         $this->pi_initPIflexForm();
@@ -71,9 +71,9 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
         $link = $this->cObj->TEXT($typolink_conf);
 
         $html = $this->getFlexform('html');
-        
+
         // Modify output
-        $html = str_replace(array("\n","'"), array("<br />","\'"), $html);
+        $html = str_replace(array("\n", "'"), array("<br />", "\'"), $html);
 
         $ce = $this->getFlexform('ce');
         $ce_id = $this->cObj->data['uid'];
@@ -129,9 +129,8 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
         if ($type == 'iframe') {
             $type_js = 'iframe:true';
         } else if ($type == 'inline') {
-            $type_js = 'inline:true, href:".' . $contentClass . '"';
+            $type_js = 'inline:true,href:".' . $contentClass . '"';
         } else if ($type == 'html') {
-            //$type_js = 'html:"' . $html . '"';
             $type_js = "html:'" . $html . "'";
         }
 
@@ -151,23 +150,28 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
 
         // Set the transistion
         if ($transition == 'elastic') {
-            $transition_js = 'transition: "elastic",';
+            $transition_js = 'transition:"elastic",';
         } else if ($transition == 'fade') {
-            $transition_js = 'transition: "fade",';
+            $transition_js = 'transition:"fade",';
         } else if ($transition == 'none') {
-            $transition_js = 'transition: "none",';
+            $transition_js = 'transition:"none",';
         }
 
         // JS for the Content
+        $js = 'jQuery(".' . $linkClass . '").colorbox({' . $open_js . '' . $transition_js . 'opacity:"' . $opacity . '",' . $type_js . ',close:"' . $this->pi_getLL("close") . '",previous:"' . $this->pi_getLL("previous") . '",next:"' . $this->pi_getLL("next") . '",';
+
         if ($deactivate_width == '1' && $deactivate_height == '0') {
-            $js = 'jQuery(".' . $linkClass . '").colorbox({' . $open_js . '' . $transition_js . 'height:"' . $height . '", opacity:"' . $opacity . '", ' . $type_js . '})';
+            $js .= 'height:"' . $height . '"';
         } else if ($deactivate_height == '1' && $deactivate_width == '0') {
-            $js = 'jQuery(".' . $linkClass . '").colorbox({' . $open_js . '' . $transition_js . 'width:"' . $width . '", opacity:"' . $opacity . '", ' . $type_js . '})';
+            $js .= 'width:"' . $width . '"';
         } else if ($deactivate_width == '1' && $deactivate_height == '1') {
-            $js = 'jQuery(".' . $linkClass . '").colorbox({' . $open_js . '' . $transition_js . 'opacity:"' . $opacity . '", ' . $type_js . '})';
+            // Add nothing
+            $js = substr($js, 0, -1);
         } else {
-            $js = 'jQuery(".' . $linkClass . '").colorbox({' . $open_js . '' . $transition_js . 'width:"' . $width . '", height:"' . $height . '", opacity:"' . $opacity . '", ' . $type_js . '})';
+            $js .= 'width:"' . $width . '", height:"' . $height . '"';
         }
+
+        $js .= '})';
 
         // Read t3jquery extConf
         $this->extConf = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['t3jquery']);
@@ -175,17 +179,9 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
 
         // Include JS to footer
         if ($this->conf['moveJsFromHeaderToFooter'] == 1 || $integrateToFooter == 1) {
-            $GLOBALS['TSFE']->additionalFooterData['rzcolorbox_begin'] = '
-            <script type="text/javascript">
-              jQuery(document).ready(function(){ 
-          ';
-            $GLOBALS['TSFE']->additionalFooterData['rzcolorbox_middle'] .= '           
-            	 ' . $js . '
-          ';
-            $GLOBALS['TSFE']->additionalFooterData['rzcolorbox_end'] = '
-            	});	
-            </script>
-          ';
+            $GLOBALS['TSFE']->additionalFooterData['rzcolorbox_begin'] = '<script type="text/javascript">jQuery(document).ready(function(){';
+            $GLOBALS['TSFE']->additionalFooterData['rzcolorbox_middle'] .= $js;
+            $GLOBALS['TSFE']->additionalFooterData['rzcolorbox_end'] = '});</script>';
         }
         // Include JS to header
         else {
@@ -267,6 +263,30 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
             return floatval($var) . $var_ext;
         } else {
             return floatval($var);
+        }
+    }
+
+    function pi_loadLL($content, $conf) {
+        parent::pi_loadLL();
+        $this->conf = $conf;
+
+        $tsLLFile = $this->conf['localLangFile'];
+        if ($tsLLFile) {
+            $tsLLFile = $tsLLFile;
+            
+            if (!$this->additional_locallang_include) {
+                $basePath = t3lib_extMgm::extPath($this->extKey) . $tsLLFile;
+                $tempLOCAL_LANG = t3lib_div::readLLfile($basePath, $this->LLkey);
+                //array_merge with new array first, so a value in locallang (or typoscript) can overwrite values from ../locallang_db
+                $this->LOCAL_LANG = array_merge_recursive($tempLOCAL_LANG, is_array($this->LOCAL_LANG) ? $this->LOCAL_LANG : array());
+                if ($this->altLLkey) {
+                    $tempLOCAL_LANG = t3lib_div::readLLfile($basePath, $this->altLLkey);
+                    $this->LOCAL_LANG = array_merge_recursive($tempLOCAL_LANG, is_array($this->LOCAL_LANG) ? $this->LOCAL_LANG : array());
+                }
+                $this->additional_locallang_include = true;
+            }
+        } else {
+            return false;
         }
     }
 
