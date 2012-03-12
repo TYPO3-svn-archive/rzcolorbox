@@ -10,7 +10,7 @@ plugin.tx_rzcolorbox_pi2 {
     opacity = 0.85
     link_image_width = 250
     allowHtml = 0
-    localLangFile = locallang.xml
+    localLangFile = typo3conf/ext/rzcolorbox/locallang.xml
 }
 
 # # Various Settings [END]

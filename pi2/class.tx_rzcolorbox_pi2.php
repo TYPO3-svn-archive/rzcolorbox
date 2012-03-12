@@ -275,8 +275,7 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
             $tsLLFile = $tsLLFile;
             
             if (!$this->additional_locallang_include) {
-                $basePath = t3lib_extMgm::extPath($this->extKey) . $tsLLFile;
-                $tempLOCAL_LANG = t3lib_div::readLLfile($basePath, $this->LLkey);
+                $tempLOCAL_LANG = t3lib_div::readLLfile($tsLLFile, $this->LLkey);
                 //array_merge with new array first, so a value in locallang (or typoscript) can overwrite values from ../locallang_db
                 $this->LOCAL_LANG = array_merge_recursive($tempLOCAL_LANG, is_array($this->LOCAL_LANG) ? $this->LOCAL_LANG : array());
                 if ($this->altLLkey) {
