@@ -144,13 +144,18 @@ page.1442 {
     34 = TEXT           
     34.value = {LLL:{$plugin.rzcolorbox.lllPath}:close} 
     34.insertData = 1         
-    34.stdWrap.dataWrap = |       
-    35 = TEXT       
-    35.value = "     
-    36 = TEXT       
-    36.value  =     
-    37 = TEXT        
-    37.value = });}); 
+    34.stdWrap.dataWrap = |    
+    35 = TEXT
+    35.value = ",rel:"
+    36 = TEXT
+    36.value = {$plugin.rzcolorbox.rel}
+    36.insertData = 1
+    37 = TEXT       
+    37.value = "     
+    38 = TEXT       
+    38.value  =     
+    39 = TEXT        
+    39.value = });}); 
   }         
 }          
 page.1442.if.isFalse = {$plugin.rzcolorbox.deactivate}
@@ -173,7 +178,8 @@ listNum.splitChar = 10
 listNum.stdWrap.data = register : IMAGE_NUM_CURRENT
 }
 
-ATagParams = class="{$plugin.rzcolorbox.rel}" rel="{$plugin.rzcolorbox.rel}[cb{field:uid}]"
+#ATagParams = class="{$plugin.rzcolorbox.rel}" rel="{$plugin.rzcolorbox.rel}[cb{field:uid}]"
+ATagParams = class="{$plugin.rzcolorbox.rel}"
 ATagParams.insertData = 1
 ATagParams.if.isFalse < .parameter.override
 

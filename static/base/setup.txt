@@ -292,65 +292,77 @@ page.headerData.1442.48.insertData = 1
 page.headerData.1442.48.stdWrap.dataWrap = |
 page.headerData.1442.48.if.isFalse = {$plugin.rzcolorbox.loop}
 
-# # Previous
+# # Rel
 page.headerData.1442.49 = TEXT
-page.headerData.1442.49.value = ,previous:"
+page.headerData.1442.49.value = ,rel:"
 
 page.headerData.1442.50 = TEXT
-page.headerData.1442.50.value = {LLL:EXT:rzcolorbox/locallang.xml:previous}
+page.headerData.1442.50.value = {$plugin.rzcolorbox.rel}
 page.headerData.1442.50.insertData = 1
 page.headerData.1442.50.stdWrap.dataWrap = |
-page.headerData.1442.50.if.isFalse = {$plugin.rzcolorbox.lllPath}
 
 page.headerData.1442.51 = TEXT
-page.headerData.1442.51.value = {LLL:{$plugin.rzcolorbox.lllPath}:previous}
-page.headerData.1442.51.insertData = 1
-page.headerData.1442.51.stdWrap.dataWrap = |
-page.headerData.1442.51.if.isTrue = {$plugin.rzcolorbox.lllPath}
+page.headerData.1442.51.value = "
 
+# # Previous
 page.headerData.1442.52 = TEXT
-page.headerData.1442.52.value = "
+page.headerData.1442.52.value = ,previous:"
 
-# # Next
 page.headerData.1442.53 = TEXT
-page.headerData.1442.53.value = ,next:"
+page.headerData.1442.53.value = {LLL:EXT:rzcolorbox/locallang.xml:previous}
+page.headerData.1442.53.insertData = 1
+page.headerData.1442.53.stdWrap.dataWrap = |
+page.headerData.1442.53.if.isFalse = {$plugin.rzcolorbox.lllPath}
 
 page.headerData.1442.54 = TEXT
-page.headerData.1442.54.value = {LLL:EXT:rzcolorbox/locallang.xml:next}
+page.headerData.1442.54.value = {LLL:{$plugin.rzcolorbox.lllPath}:previous}
 page.headerData.1442.54.insertData = 1
 page.headerData.1442.54.stdWrap.dataWrap = |
-page.headerData.1442.54.if.isFalse = {$plugin.rzcolorbox.lllPath}
+page.headerData.1442.54.if.isTrue = {$plugin.rzcolorbox.lllPath}
 
 page.headerData.1442.55 = TEXT
-page.headerData.1442.55.value = {LLL:{$plugin.rzcolorbox.lllPath}:next}
-page.headerData.1442.55.insertData = 1
-page.headerData.1442.55.stdWrap.dataWrap = |
-page.headerData.1442.55.if.isTrue = {$plugin.rzcolorbox.lllPath}
+page.headerData.1442.55.value = "
 
+# # Next
 page.headerData.1442.56 = TEXT
-page.headerData.1442.56.value = "
+page.headerData.1442.56.value = ,next:"
 
-# # Close
 page.headerData.1442.57 = TEXT
-page.headerData.1442.57.value = ,close:"
+page.headerData.1442.57.value = {LLL:EXT:rzcolorbox/locallang.xml:next}
+page.headerData.1442.57.insertData = 1
+page.headerData.1442.57.stdWrap.dataWrap = |
+page.headerData.1442.57.if.isFalse = {$plugin.rzcolorbox.lllPath}
 
 page.headerData.1442.58 = TEXT
-page.headerData.1442.58.value = {LLL:EXT:rzcolorbox/locallang.xml:close}
+page.headerData.1442.58.value = {LLL:{$plugin.rzcolorbox.lllPath}:next}
 page.headerData.1442.58.insertData = 1
 page.headerData.1442.58.stdWrap.dataWrap = |
-page.headerData.1442.58.if.isFalse = {$plugin.rzcolorbox.lllPath}
+page.headerData.1442.58.if.isTrue = {$plugin.rzcolorbox.lllPath}
 
 page.headerData.1442.59 = TEXT
-page.headerData.1442.59.value = {LLL:{$plugin.rzcolorbox.lllPath}:close}
-page.headerData.1442.59.insertData = 1
-page.headerData.1442.59.stdWrap.dataWrap = |
-page.headerData.1442.59.if.isTrue = {$plugin.rzcolorbox.lllPath}
+page.headerData.1442.59.value = "
 
+# # Close
 page.headerData.1442.60 = TEXT
-page.headerData.1442.60.value = "
+page.headerData.1442.60.value = ,close:"
 
 page.headerData.1442.61 = TEXT
-page.headerData.1442.61.value = });});</script>
+page.headerData.1442.61.value = {LLL:EXT:rzcolorbox/locallang.xml:close}
+page.headerData.1442.61.insertData = 1
+page.headerData.1442.61.stdWrap.dataWrap = |
+page.headerData.1442.61.if.isFalse = {$plugin.rzcolorbox.lllPath}
+
+page.headerData.1442.62 = TEXT
+page.headerData.1442.62.value = {LLL:{$plugin.rzcolorbox.lllPath}:close}
+page.headerData.1442.62.insertData = 1
+page.headerData.1442.62.stdWrap.dataWrap = |
+page.headerData.1442.62.if.isTrue = {$plugin.rzcolorbox.lllPath}
+
+page.headerData.1442.63 = TEXT
+page.headerData.1442.63.value = "
+
+page.headerData.1442.64 = TEXT
+page.headerData.1442.64.value = });});</script>
 
 # # Modify imageLinkWrap
 tt_content.image.20.1.imageLinkWrap {
@@ -369,7 +381,8 @@ field = image_link
 listNum.stdWrap.data = register : IMAGE_NUM_CURRENT
 }
 
-ATagParams = class="{$plugin.rzcolorbox.rel}" rel="{$plugin.rzcolorbox.rel}[cb{field:uid}]"
+#ATagParams = class="{$plugin.rzcolorbox.rel}" rel="{$plugin.rzcolorbox.rel}[cb{field:uid}]"
+ATagParams = class="{$plugin.rzcolorbox.rel}"
 ATagParams.insertData = 1
 ATagParams.if.isFalse < .parameter.override
 
