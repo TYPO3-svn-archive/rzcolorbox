@@ -28,15 +28,36 @@ innerHeight =
 initialWidth = 
 
 # cat=rzcolorbox/option/060; type=string; label=Initial Height: Set the initial height, prior to any content being loaded;
-initialHeight = 
-             
-# cat=rzcolorbox/option/070; type=options[elastic,fade,none]; label=Transition: Can be set to "elastic", "fade", or "none";
+initialHeight =              
+
+# cat=rzcolorbox/option/070; type=string; label=Width: Set a fixed total width. This includes borders and buttons. Example: "100%", "500px", or 500;
+width = 
+
+# cat=rzcolorbox/option/080; type=string; label=Height: Set a fixed total height. This includes borders and buttons. Example: "100%", "500px", or 500;
+height = 
+
+# cat=rzcolorbox/option/90; type=options[elastic,fade,none]; label=Transition: Can be set to "elastic", "fade", or "none";
 transition = fade      
 
-# cat=rzcolorbox/option/080; type=string; label=Speed: Sets the speed of the fade and elastic transitions, in milliseconds;
+# cat=rzcolorbox/option/100; type=string; label=Speed: Sets the speed of the fade and elastic transitions, in milliseconds;
 speed = 350      
 
-# cat=rzcolorbox/option/090; type=string; label=Slideshow Speed: Sets the speed of the slideshow, in milliseconds;
+# cat=rzcolorbox/option/110; type=string; label=Slideshow Speed: Sets the speed of the slideshow, in milliseconds;
 slideshowSpeed = 2500       
-                                
+  
+# cat=rzcolorbox/option/120; type=boolean; label=Overlay Close: If false, disables closing ColorBox by clicking on the background overlay;
+overlayClose = 1
+
+# cat=rzcolorbox/option/130; type=boolean; label=ESC Key: If false, will disable closing colorbox on esc key press;
+escKey = 1
+
+# cat=rzcolorbox/option/140; type=boolean; label=Arrow Key: If false, will disable the left and right arrow keys from navigating between the items in a group;
+arrowKey = 1
+
+# cat=rzcolorbox/option/150; type=boolean; label=Loop: If false, will disable the ability to loop back to the beginning of the group when on the last element;
+loop = 1
+
+# cat=rzcolorbox/option/160; type=boolean; label=Fixed: If true, ColorBox will be displayed in a fixed position within the visitor's viewport. This is unlike the default absolute positioning relative to the document;
+fixed = 0
+                              
 }

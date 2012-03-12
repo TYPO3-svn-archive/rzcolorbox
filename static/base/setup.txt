@@ -251,13 +251,13 @@ page.headerData.1442.40.if.isFalse = {$plugin.rzcolorbox.overlayClose}
 # # Fixed
 page.headerData.1442.41 = TEXT
 page.headerData.1442.41.value = ,fixed:
-page.headerData.1442.41.if.isFalse = {$plugin.rzcolorbox.fixed}
+page.headerData.1442.41.if.isTrue = {$plugin.rzcolorbox.fixed}
 
 page.headerData.1442.42 = TEXT
-page.headerData.1442.42.value = false
+page.headerData.1442.42.value = true
 page.headerData.1442.42.insertData = 1
 page.headerData.1442.42.stdWrap.dataWrap = |
-page.headerData.1442.42.if.isFalse = {$plugin.rzcolorbox.fixed}
+page.headerData.1442.42.if.isTrue = {$plugin.rzcolorbox.fixed}
 
 # # Escape Key
 page.headerData.1442.43 = TEXT
