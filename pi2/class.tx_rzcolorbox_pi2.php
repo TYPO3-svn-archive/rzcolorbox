@@ -53,7 +53,16 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
         $link_text = $this->getFlexform('linktext', 'options');
         $link_image = $this->getFlexform('linktext_image', 'options');
         $link_image_width = $this->getFlexform('linktext_image_width', 'options');
-
+        $esc_key = $this->getFlexform('escKey', 'options');
+        $arrow_key = $this->getFlexform('arrowKey', 'options');
+        
+        if($esc_key == 0) {
+            $esc_key_out = 'escKey:false,';
+        }
+        
+        if($arrow_key == 0) {
+            $arrow_key_out = 'arrowKey:false,';
+        }
 
         $opacity = $this->conf['opacity'];
         if (empty($opacity))
@@ -158,7 +167,7 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
         }
 
         // JS for the Content
-        $js = 'jQuery(".' . $linkClass . '").colorbox({' . $open_js . '' . $transition_js . 'opacity:"' . $opacity . '",' . $type_js . ',close:"' . $this->pi_getLL("close") . '",previous:"' . $this->pi_getLL("previous") . '",next:"' . $this->pi_getLL("next") . '",';
+        $js = 'jQuery(".' . $linkClass . '").colorbox({' . $open_js . '' . $esc_key_out . '' .$arrow_key_out . '' . $transition_js . 'opacity:"' . $opacity . '",' . $type_js . ',close:"' . $this->pi_getLL("close") . '",previous:"' . $this->pi_getLL("previous") . '",next:"' . $this->pi_getLL("next") . '",';
 
         if ($deactivate_width == '1' && $deactivate_height == '0') {
             $js .= 'height:"' . $height . '"';

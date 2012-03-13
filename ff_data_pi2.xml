@@ -259,7 +259,29 @@
                                 <size>1</size>
                             </config>
                         </TCEforms>
-                    </open>     
+                    </open>   
+                    <escKey>
+                        <TCEforms>
+                            <label>LLL:EXT:rzcolorbox/locallang_tca.xml:rzcolorbox.pi_flexform.escKey</label>
+                            <config>
+                                <type>check</type>
+                                <checkbox></checkbox>
+                                <size>1</size>
+                                <default>1</default>
+                            </config>
+                        </TCEforms>
+                    </escKey>  
+                    <arrowKey>
+                        <TCEforms>
+                            <label>LLL:EXT:rzcolorbox/locallang_tca.xml:rzcolorbox.pi_flexform.arrowKey</label>
+                            <config>
+                                <type>check</type>
+                                <checkbox></checkbox>
+                                <size>1</size>
+                                <default>1</default>
+                            </config>
+                        </TCEforms>
+                    </arrowKey>                      
                 </el>
             </ROOT>
         </options>
