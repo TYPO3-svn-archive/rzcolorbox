@@ -180,7 +180,7 @@ class tx_rzcolorbox_pi2 extends tslib_pibase {
             $js .= 'width:"' . $width . '", height:"' . $height . '"';
         }
 
-        $js .= '})';
+        $js .= '});';
 
         // Read t3jquery extConf
         $this->extConf = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['t3jquery']);
