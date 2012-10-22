@@ -3,16 +3,16 @@ if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-if (t3lib_div::int_from_ver(TYPO3_version) >= 4005000) {
-  t3lib_extMgm::addStaticFile($_EXTKEY,'static/base/4.5/','4.5 jQuery ColorBox Base');  
+if (t3lib_utility_VersionNumber::convertVersionNumberToInteger(TYPO3_version) >= 4005000) {
+  t3lib_extMgm::addStaticFile($_EXTKEY,'static/base/4.5/','> 4.5 jQuery ColorBox Base');  
 }
 
 else {
   t3lib_extMgm::addStaticFile($_EXTKEY,'static/base/','jQuery ColorBox Base');
 }
 
-if (t3lib_div::int_from_ver(TYPO3_version) >= 4005000) {
-  t3lib_extMgm::addStaticFile($_EXTKEY,'static/t3jquery/4.5/','4.5 jQuery ColorBox Base for t3jquery');
+if (t3lib_utility_VersionNumber::convertVersionNumberToInteger(TYPO3_version) >= 4005000) {
+  t3lib_extMgm::addStaticFile($_EXTKEY,'static/t3jquery/4.5/','> 4.5 jQuery ColorBox Base for t3jquery');
 }
 
 else {
